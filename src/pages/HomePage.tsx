@@ -1,8 +1,10 @@
+import { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Shield, Award, Clock, Users, Heart, MessageCircle, BookOpen, Sparkles } from 'lucide-react'
+import { ArrowRight, Shield, Award, Clock, Users, Heart, MessageCircle, BookOpen, Sparkles, ChevronDown } from 'lucide-react'
 import WhatsAppCTA from '../components/WhatsAppCTA'
 import SectionReveal from '../components/SectionReveal'
+import { blogPosts } from '../data/blogs'
 
 /* ═══════════════════════════ HERO ═══════════════════════════ */
 function HeroSection() {
@@ -314,7 +316,7 @@ function Testimonials() {
 /* ═══════════════════════════ CREDENTIALS ═══════════════════════════ */
 function Credentials() {
   const points = [
-    { label: 'Sober Since', value: '28 November 2016 — 8+ years of personal recovery' },
+    { label: 'Sober Since', value: '28 November 2016 — 10+ years of personal recovery' },
     { label: 'Certifications', value: 'Certified Guidance Counsellor · CBT & REBT Therapist' },
     { label: 'Experience', value: 'Personal experience with both alcohol and drug addiction' },
     { label: 'Approach', value: 'Evidence-based coaching combined with lived experience' },
@@ -402,25 +404,105 @@ function PricingPreview() {
   )
 }
 
-/* ═══════════════════════════ BLOG PREVIEW ═══════════════════════════ */
-function BlogPreview() {
-  const posts = [
+/* ═══════════════════════════ FAQ SECTION ═══════════════════════════ */
+function FAQSection() {
+  const faqs = [
     {
-      title: 'The First 30 Days: What Nobody Tells You About Early Sobriety',
-      excerpt: 'The hardest part isn\'t quitting — it\'s learning to live differently. Here\'s what I wish someone had told me.',
-      date: 'May 2026',
+      q: 'What is a sobriety coach and how can they help me?',
+      a: 'A sobriety coach is a trained recovery professional who provides personalised, one-on-one support to help you achieve and maintain sobriety. Unlike therapists who focus primarily on mental health diagnoses, a sobriety coach works alongside you in your daily life — helping you navigate triggers, build new habits, and create a sustainable recovery plan. At Releaf, I combine my own 10+ years of personal recovery with certified CBT & REBT techniques to offer guidance that\'s both evidence-based and deeply empathetic.',
     },
     {
-      title: 'Why Recovery Coaching is Not the Same as Therapy',
-      excerpt: 'Understanding the difference can help you choose the right support for where you are right now.',
-      date: 'April 2026',
+      q: 'How is sobriety coaching different from rehab or therapy?',
+      a: 'Rehab is typically a short-term, residential programme focused on detox and stabilisation. Therapy addresses underlying mental health conditions. Sobriety coaching fills the gap between the two — it\'s ongoing, flexible, and focused on real-world accountability. You don\'t need to leave your home or take time off work. Sessions happen virtually via Zoom or WhatsApp, and I provide daily check-ins to keep you on track. Many of my clients work with me after rehab to prevent relapse, or instead of rehab for a more personalised approach.',
     },
     {
-      title: 'Navigating Social Events When You\'re Sober',
-      excerpt: 'Practical strategies from someone who has been to every party, wedding, and dinner sober.',
-      date: 'March 2026',
+      q: 'Can I get sobriety coaching online in India?',
+      a: 'Absolutely. All my coaching sessions are available online, so you can access support from anywhere in India — whether you\'re in Mumbai, Delhi, Bangalore, or a smaller town. Sessions are conducted via Zoom or WhatsApp video call, and I offer flexible scheduling to accommodate your work and family commitments. The online format also ensures complete privacy and discretion.',
+    },
+    {
+      q: 'What is a sober companion and when do I need one?',
+      a: 'A sober companion provides in-person accompaniment during high-risk situations — social events, business trips, family gatherings, or the vulnerable period right after leaving rehab. I physically accompany you through these moments, offering real-time support and crisis management. This service is ideal for anyone who needs hands-on support navigating environments where triggers are present.',
+    },
+    {
+      q: 'How much does sobriety coaching cost in India?',
+      a: 'My coaching packages start from ₹6,000 per session, with monthly packages available from ₹20,000. This is significantly more affordable than residential rehab (which can cost ₹1-5 lakhs per month) while offering more personalised, ongoing support. I also offer a free 30-minute consultation so you can experience the coaching before committing to anything.',
+    },
+    {
+      q: 'What if I\'ve tried rehab before and it didn\'t work?',
+      a: 'Many of my clients come to me after one or more rehab stays that didn\'t lead to lasting sobriety. This is more common than you\'d think — and it doesn\'t mean you\'ve failed. It often means the approach wasn\'t right for you. Sobriety coaching is different because it\'s tailored to your specific life, triggers, and goals. We work together over months (not weeks), building the daily habits and coping strategies that make long-term recovery sustainable.',
     },
   ]
+
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
+
+  return (
+    <section className="py-20 sm:py-28" id="faq">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <SectionReveal>
+          <div className="text-center mb-14">
+            <p className="eyebrow mb-3">Common Questions</p>
+            <h2>Frequently asked questions</h2>
+          </div>
+        </SectionReveal>
+
+        <div className="space-y-3">
+          {faqs.map((faq, i) => (
+            <SectionReveal key={i} delay={i * 60}>
+              <div className="bg-white rounded-2xl border border-forest/8 overflow-hidden">
+                <button
+                  onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                  className="w-full flex items-center justify-between gap-4 p-6 text-left group cursor-pointer"
+                  aria-expanded={openIndex === i}
+                >
+                  <h3 className="text-base font-semibold text-forest group-hover:text-leaf transition-colors duration-200 pr-4">
+                    {faq.q}
+                  </h3>
+                  <ChevronDown
+                    className={`w-5 h-5 text-sage shrink-0 transition-transform duration-300 ${
+                      openIndex === i ? 'rotate-180' : ''
+                    }`}
+                  />
+                </button>
+                <div
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    openIndex === i ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                  }`}
+                >
+                  <p className="px-6 pb-6 text-sm text-moss leading-relaxed">
+                    {faq.a}
+                  </p>
+                </div>
+              </div>
+            </SectionReveal>
+          ))}
+        </div>
+      </div>
+
+      {/* FAQPage Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((faq) => ({
+              '@type': 'Question',
+              name: faq.q,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: faq.a,
+              },
+            })),
+          }),
+        }}
+      />
+    </section>
+  )
+}
+
+/* ═══════════════════════════ BLOG PREVIEW ═══════════════════════════ */
+function BlogPreview() {
+  const latestPosts = blogPosts.slice(0, 3)
 
   return (
     <section className="bg-mist py-20 sm:py-28">
@@ -433,9 +515,9 @@ function BlogPreview() {
         </SectionReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {posts.map((post, i) => (
-            <SectionReveal key={i} delay={i * 100}>
-              <Link to="/blog" className="card-hover block bg-white rounded-2xl border border-forest/8 p-7 h-full group">
+          {latestPosts.map((post, i) => (
+            <SectionReveal key={post.slug} delay={i * 100}>
+              <Link to={`/blog/${post.slug}`} className="card-hover block bg-white rounded-2xl border border-forest/8 p-7 h-full group">
                 <p className="text-xs text-sage font-medium mb-3">{post.date} · by Rahul</p>
                 <h3 className="text-base font-semibold text-forest mb-3 group-hover:text-leaf transition-colors duration-200">
                   {post.title}
@@ -448,6 +530,17 @@ function BlogPreview() {
             </SectionReveal>
           ))}
         </div>
+
+        <SectionReveal delay={300}>
+          <div className="text-center mt-10">
+            <Link
+              to="/blog"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-leaf hover:text-forest transition-colors duration-200"
+            >
+              View all articles <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </SectionReveal>
       </div>
     </section>
   )
@@ -507,6 +600,7 @@ export default function HomePage() {
       <Testimonials />
       <Credentials />
       <PricingPreview />
+      <FAQSection />
       <BlogPreview />
       <FinalCTA />
     </>

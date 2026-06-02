@@ -244,12 +244,24 @@ function Footer() {
             jobTitle: 'Sobriety Coach & Certified Guidance Counsellor',
             description: 'Sobriety coach with 10 years of personal recovery experience. Certified CBT & REBT therapist helping individuals across India.',
             url: 'https://releaf.co.in',
+            image: 'https://releaf.co.in/rahul-portrait.jpg',
             telephone: '+919820281442',
             address: {
               '@type': 'PostalAddress',
               addressLocality: 'Mumbai',
+              addressRegion: 'Maharashtra',
               addressCountry: 'IN',
             },
+            knowsAbout: [
+              'Sobriety Coaching',
+              'Addiction Recovery',
+              'Sober Companion Services',
+              'Cognitive Behavioural Therapy (CBT)',
+              'Rational Emotive Behaviour Therapy (REBT)',
+              'Relapse Prevention',
+              'Rehab Transition Support',
+              'Mental Health Counselling',
+            ],
             sameAs: ['https://wa.me/919820281442'],
           }),
         }}
@@ -259,10 +271,11 @@ function Footer() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'LocalBusiness',
-            name: 'Releaf',
-            description: 'Personalised sobriety coaching, sober companion support, and rehab transition guidance across India.',
+            '@type': 'ProfessionalService',
+            name: 'Releaf — Sobriety Coaching by Rahul Seth',
+            description: 'Personalised sobriety coaching, sober companion support, and rehab transition guidance across India. Founded by Rahul Seth, 10 years sober.',
             url: 'https://releaf.co.in',
+            image: 'https://releaf.co.in/rahul-portrait.jpg',
             telephone: '+919820281442',
             address: {
               '@type': 'PostalAddress',
@@ -270,8 +283,42 @@ function Footer() {
               addressRegion: 'Maharashtra',
               addressCountry: 'IN',
             },
+            areaServed: [
+              { '@type': 'City', name: 'Mumbai' },
+              { '@type': 'Country', name: 'India' },
+            ],
             priceRange: '₹6,000 - ₹30,000',
             openingHours: 'Mo-Sa 09:00-20:00',
+            hasOfferCatalog: {
+              '@type': 'OfferCatalog',
+              name: 'Sobriety Coaching Services',
+              itemListElement: [
+                {
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: 'Sober Coaching',
+                    description: 'Ongoing 1-on-1 sobriety coaching with weekly sessions, daily check-ins, CBT & REBT techniques, and relapse prevention planning.',
+                  },
+                },
+                {
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: 'Sober Companion',
+                    description: 'In-person accompaniment through social events, travel, and high-risk situations for real-time support.',
+                  },
+                },
+                {
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: 'Rehab Transition Support',
+                    description: 'Post-rehab life planning, daily accountability, and structured re-entry support for those leaving treatment facilities.',
+                  },
+                },
+              ],
+            },
           }),
         }}
       />

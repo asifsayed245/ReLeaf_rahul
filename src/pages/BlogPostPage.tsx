@@ -19,6 +19,33 @@ export default function BlogPostPage() {
         <title>{post.title} | Releaf — Rahul Seth</title>
         <meta name="description" content={post.excerpt} />
         <meta property="og:title" content={`${post.title} | Releaf`} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:url" content={`https://releaf.co.in/blog/${post.slug}`} />
+        <meta property="og:type" content="article" />
+        <link rel="canonical" href={`https://releaf.co.in/blog/${post.slug}`} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Article',
+            headline: post.title,
+            description: post.excerpt,
+            datePublished: post.date,
+            author: {
+              '@type': 'Person',
+              name: 'Rahul Seth',
+              url: 'https://releaf.co.in/my-story',
+            },
+            publisher: {
+              '@type': 'Organization',
+              name: 'Releaf',
+              url: 'https://releaf.co.in',
+            },
+            mainEntityOfPage: {
+              '@type': 'WebPage',
+              '@id': `https://releaf.co.in/blog/${post.slug}`,
+            },
+          })}
+        </script>
       </Helmet>
 
       {/* Hero Section */}
