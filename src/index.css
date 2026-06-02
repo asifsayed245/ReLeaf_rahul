@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+/* ── Releaf Design System: "Organic Clarity" ── */
+
+@theme {
+  /* Color Palette */
+  --color-forest: #1f2a1d;
+  --color-canopy: #2d3a2a;
+  --color-leaf: #336443;
+  --color-sage: #85AB8B;
+  --color-moss: #4b5b47;
+  --color-mist: #f4f7f3;
+  --color-dew: #e8f0e6;
+  --color-bark: #3d5638;
+  --color-amber: #c97d3b;
+  --color-clay: #8b4a3a;
+  --color-sky: #4a7fa5;
+  --color-ink: #1a1f19;
+  --color-whatsapp: #25D366;
+
+  /* Typography */
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+
+  /* Animation Timing */
+  --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ── Base Styles ── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-moss);
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Typography Scale (from PRD Section 03) ── */
+@layer base {
+  h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 6vw, 5.25rem);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--color-forest);
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 3vw, 2.5rem);
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--color-leaf);
+  }
+
+  h3 {
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-forest);
+  }
+
+  p {
+    line-height: 1.7;
+  }
+}
+
+
+
+/* ── Eyebrow Label ── */
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-sage);
+}
+
+/* ── Section Fade-in Animation ── */
+.fade-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 500ms ease-out, transform 500ms ease-out;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Hero Text Stagger Animation ── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-stagger > * {
+  opacity: 0;
+  animation: fadeUp 600ms ease-out forwards;
+}
+
+.hero-stagger > *:nth-child(1) { animation-delay: 200ms; }
+.hero-stagger > *:nth-child(2) { animation-delay: 400ms; }
+.hero-stagger > *:nth-child(3) { animation-delay: 600ms; }
+.hero-stagger > *:nth-child(4) { animation-delay: 800ms; }
+.hero-stagger > *:nth-child(5) { animation-delay: 1000ms; }
+
+/* ── Card Hover ── */
+.card-hover {
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(31, 42, 29, 0.12);
+}
+
+/* ── CTA Button Hover ── */
+.cta-hover {
+  transition: background-color 150ms, transform 150ms;
+}
+
+.cta-hover:hover {
+  transform: translateY(-1px);
+}
+
+/* ── Mobile Drawer ── */
+.drawer-overlay {
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.drawer-overlay.open {
+  opacity: 1;
+}
+
+.drawer-panel {
+  transform: translateX(100%);
+  transition: transform 500ms var(--ease-out-expo);
+}
+
+.drawer-panel.open {
+  transform: translateX(0);
+}
+
+.drawer-link {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.drawer-link.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── Scrollbar Styling ── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-mist);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-sage);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-leaf);
+}
+
+/* ── Focus Indicators (Accessibility) ── */
+*:focus-visible {
+  outline: 2px solid var(--color-leaf);
+  outline-offset: 2px;
+}
+
+/* ── Selection ── */
+::selection {
+  background: var(--color-dew);
+  color: var(--color-forest);
+}

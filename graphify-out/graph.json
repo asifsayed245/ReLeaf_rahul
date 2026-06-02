@@ -1,0 +1,2714 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "eslint.config.js",
+      "file_type": "code",
+      "source_file": "eslint.config.js",
+      "source_location": "L1",
+      "id": "eslint_config_js",
+      "community": 12,
+      "norm_label": "eslint.config.js"
+    },
+    {
+      "label": "extractBlogs.js",
+      "file_type": "code",
+      "source_file": "extractBlogs.js",
+      "source_location": "L1",
+      "id": "extractblogs_js",
+      "community": 7,
+      "norm_label": "extractblogs.js"
+    },
+    {
+      "label": "files",
+      "file_type": "code",
+      "source_file": "extractBlogs.js",
+      "source_location": "L5",
+      "id": "releaf_rahul_extractblogs_files",
+      "community": 7,
+      "norm_label": "files"
+    },
+    {
+      "label": "filePath",
+      "file_type": "code",
+      "source_file": "extractBlogs.js",
+      "source_location": "L28",
+      "id": "releaf_rahul_extractblogs_filepath",
+      "community": 7,
+      "norm_label": "filepath"
+    },
+    {
+      "label": "content",
+      "file_type": "code",
+      "source_file": "extractBlogs.js",
+      "source_location": "L29",
+      "id": "releaf_rahul_extractblogs_content",
+      "community": 7,
+      "norm_label": "content"
+    },
+    {
+      "label": "parts",
+      "file_type": "code",
+      "source_file": "extractBlogs.js",
+      "source_location": "L33",
+      "id": "releaf_rahul_extractblogs_parts",
+      "community": 7,
+      "norm_label": "parts"
+    },
+    {
+      "label": "bodyContent",
+      "file_type": "code",
+      "source_file": "extractBlogs.js",
+      "source_location": "L34",
+      "id": "releaf_rahul_extractblogs_bodycontent",
+      "community": 7,
+      "norm_label": "bodycontent"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L1",
+      "id": "package_json",
+      "community": 3,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "id": "releaf_rahul_package_name",
+      "community": 3,
+      "norm_label": "name"
+    },
+    {
+      "label": "private",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "id": "releaf_rahul_package_private",
+      "community": 3,
+      "norm_label": "private"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "id": "releaf_rahul_package_version",
+      "community": 3,
+      "norm_label": "version"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "id": "releaf_rahul_package_type",
+      "community": 3,
+      "norm_label": "type"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "id": "releaf_rahul_package_scripts",
+      "community": 3,
+      "norm_label": "scripts"
+    },
+    {
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "id": "releaf_rahul_package_scripts_dev",
+      "community": 3,
+      "norm_label": "dev"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "id": "releaf_rahul_package_scripts_build",
+      "community": 3,
+      "norm_label": "build"
+    },
+    {
+      "label": "lint",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "id": "releaf_rahul_package_scripts_lint",
+      "community": 3,
+      "norm_label": "lint"
+    },
+    {
+      "label": "preview",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "id": "releaf_rahul_package_scripts_preview",
+      "community": 3,
+      "norm_label": "preview"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "id": "releaf_rahul_package_dependencies",
+      "community": 3,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "lucide-react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "id": "releaf_rahul_package_dependencies_lucide_react",
+      "community": 3,
+      "norm_label": "lucide-react"
+    },
+    {
+      "label": "react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "id": "releaf_rahul_package_dependencies_react",
+      "community": 3,
+      "norm_label": "react"
+    },
+    {
+      "label": "react-dom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "id": "releaf_rahul_package_dependencies_react_dom",
+      "community": 3,
+      "norm_label": "react-dom"
+    },
+    {
+      "label": "react-helmet-async",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "id": "releaf_rahul_package_dependencies_react_helmet_async",
+      "community": 3,
+      "norm_label": "react-helmet-async"
+    },
+    {
+      "label": "react-markdown",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "id": "releaf_rahul_package_dependencies_react_markdown",
+      "community": 3,
+      "norm_label": "react-markdown"
+    },
+    {
+      "label": "react-router-dom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "id": "releaf_rahul_package_dependencies_react_router_dom",
+      "community": 3,
+      "norm_label": "react-router-dom"
+    },
+    {
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L20",
+      "id": "releaf_rahul_package_devdependencies",
+      "community": 4,
+      "norm_label": "devdependencies"
+    },
+    {
+      "label": "@eslint/js",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "id": "releaf_rahul_package_devdependencies_eslint_js",
+      "community": 4,
+      "norm_label": "@eslint/js"
+    },
+    {
+      "label": "@tailwindcss/vite",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "id": "releaf_rahul_package_devdependencies_tailwindcss_vite",
+      "community": 4,
+      "norm_label": "@tailwindcss/vite"
+    },
+    {
+      "label": "@types/node",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "id": "releaf_rahul_package_devdependencies_types_node",
+      "community": 4,
+      "norm_label": "@types/node"
+    },
+    {
+      "label": "@types/react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "id": "releaf_rahul_package_devdependencies_types_react",
+      "community": 4,
+      "norm_label": "@types/react"
+    },
+    {
+      "label": "@types/react-dom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "id": "releaf_rahul_package_devdependencies_types_react_dom",
+      "community": 4,
+      "norm_label": "@types/react-dom"
+    },
+    {
+      "label": "@vitejs/plugin-react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L26",
+      "id": "releaf_rahul_package_devdependencies_vitejs_plugin_react",
+      "community": 4,
+      "norm_label": "@vitejs/plugin-react"
+    },
+    {
+      "label": "eslint",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L27",
+      "id": "releaf_rahul_package_devdependencies_eslint",
+      "community": 4,
+      "norm_label": "eslint"
+    },
+    {
+      "label": "eslint-plugin-react-hooks",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L28",
+      "id": "releaf_rahul_package_devdependencies_eslint_plugin_react_hooks",
+      "community": 4,
+      "norm_label": "eslint-plugin-react-hooks"
+    },
+    {
+      "label": "eslint-plugin-react-refresh",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L29",
+      "id": "releaf_rahul_package_devdependencies_eslint_plugin_react_refresh",
+      "community": 4,
+      "norm_label": "eslint-plugin-react-refresh"
+    },
+    {
+      "label": "globals",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L30",
+      "id": "releaf_rahul_package_devdependencies_globals",
+      "community": 4,
+      "norm_label": "globals"
+    },
+    {
+      "label": "tailwindcss",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L31",
+      "id": "releaf_rahul_package_devdependencies_tailwindcss",
+      "community": 4,
+      "norm_label": "tailwindcss"
+    },
+    {
+      "label": "typescript",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L32",
+      "id": "releaf_rahul_package_devdependencies_typescript",
+      "community": 4,
+      "norm_label": "typescript"
+    },
+    {
+      "label": "typescript-eslint",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L33",
+      "id": "releaf_rahul_package_devdependencies_typescript_eslint",
+      "community": 4,
+      "norm_label": "typescript-eslint"
+    },
+    {
+      "label": "vite",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L34",
+      "id": "releaf_rahul_package_devdependencies_vite",
+      "community": 4,
+      "norm_label": "vite"
+    },
+    {
+      "label": "tsconfig.app.json",
+      "file_type": "code",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L1",
+      "id": "tsconfig_app_json",
+      "community": 1,
+      "norm_label": "tsconfig.app.json"
+    },
+    {
+      "label": "compilerOptions",
+      "file_type": "code",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L2",
+      "id": "releaf_rahul_tsconfig_app_compileroptions",
+      "community": 1,
+      "norm_label": "compileroptions"
+    },
+    {
+      "label": "tsBuildInfoFile",
+      "file_type": "code",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L3",
+      "id": "releaf_rahul_tsconfig_app_compileroptions_tsbuildinfofile",
+      "community": 1,
+      "norm_label": "tsbuildinfofile"
+    },
+    {
+      "label": "target",
+      "file_type": "code",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L4",
+      "id": "releaf_rahul_tsconfig_app_compileroptions_target",
+      "community": 1,
+      "norm_label": "target"
+    },
+    {
+      "label": "lib",
+      "file_type": "code",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L5",
+      "id": "releaf_rahul_tsconfig_app_compileroptions_lib",
+      "community": 1,
+      "norm_label": "lib"
+    },
+    {
+      "label": "module",
+      "file_type": "code",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L6",
+      "id": "releaf_rahul_tsconfig_app_compileroptions_module",
+      "community": 1,
+      "norm_label": "module"
+    },
+    {
+      "label": "types",
+      "file_type": "code",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L7",
+      "id": "releaf_rahul_tsconfig_app_compileroptions_types",
+      "community": 1,
+      "norm_label": "types"
+    },
+    {
+      "label": "skipLibCheck",
+      "file_type": "code",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L8",
+      "id": "releaf_rahul_tsconfig_app_compileroptions_skiplibcheck",
+      "community": 1,
+      "norm_label": "skiplibcheck"
+    },
+    {
+      "label": "moduleResolution",
+      "file_type": "code",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L11",
+      "id": "releaf_rahul_tsconfig_app_compileroptions_moduleresolution",
+      "community": 1,
+      "norm_label": "moduleresolution"
+    },
+    {
+      "label": "allowImportingTsExtensions",
+      "file_type": "code",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L12",
+      "id": "releaf_rahul_tsconfig_app_compileroptions_allowimportingtsextensions",
+      "community": 1,
+      "norm_label": "allowimportingtsextensions"
+    },
+    {
+      "label": "verbatimModuleSyntax",
+      "file_type": "code",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L13",
+      "id": "releaf_rahul_tsconfig_app_compileroptions_verbatimmodulesyntax",
+      "community": 1,
+      "norm_label": "verbatimmodulesyntax"
+    },
+    {
+      "label": "moduleDetection",
+      "file_type": "code",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L14",
+      "id": "releaf_rahul_tsconfig_app_compileroptions_moduledetection",
+      "community": 1,
+      "norm_label": "moduledetection"
+    },
+    {
+      "label": "noEmit",
+      "file_type": "code",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L15",
+      "id": "releaf_rahul_tsconfig_app_compileroptions_noemit",
+      "community": 1,
+      "norm_label": "noemit"
+    },
+    {
+      "label": "jsx",
+      "file_type": "code",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L16",
+      "id": "releaf_rahul_tsconfig_app_compileroptions_jsx",
+      "community": 1,
+      "norm_label": "jsx"
+    },
+    {
+      "label": "noUnusedLocals",
+      "file_type": "code",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L19",
+      "id": "releaf_rahul_tsconfig_app_compileroptions_nounusedlocals",
+      "community": 1,
+      "norm_label": "nounusedlocals"
+    },
+    {
+      "label": "noUnusedParameters",
+      "file_type": "code",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L20",
+      "id": "releaf_rahul_tsconfig_app_compileroptions_nounusedparameters",
+      "community": 1,
+      "norm_label": "nounusedparameters"
+    },
+    {
+      "label": "erasableSyntaxOnly",
+      "file_type": "code",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L21",
+      "id": "releaf_rahul_tsconfig_app_compileroptions_erasablesyntaxonly",
+      "community": 1,
+      "norm_label": "erasablesyntaxonly"
+    },
+    {
+      "label": "noFallthroughCasesInSwitch",
+      "file_type": "code",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L22",
+      "id": "releaf_rahul_tsconfig_app_compileroptions_nofallthroughcasesinswitch",
+      "community": 1,
+      "norm_label": "nofallthroughcasesinswitch"
+    },
+    {
+      "label": "include",
+      "file_type": "code",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L24",
+      "id": "releaf_rahul_tsconfig_app_include",
+      "community": 1,
+      "norm_label": "include"
+    },
+    {
+      "label": "tsconfig.json",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L1",
+      "id": "tsconfig_json",
+      "community": 10,
+      "norm_label": "tsconfig.json"
+    },
+    {
+      "label": "files",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L2",
+      "id": "releaf_rahul_tsconfig_files",
+      "community": 10,
+      "norm_label": "files"
+    },
+    {
+      "label": "references",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L3",
+      "id": "releaf_rahul_tsconfig_references",
+      "community": 10,
+      "norm_label": "references"
+    },
+    {
+      "label": "tsconfig.node.json",
+      "file_type": "code",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L1",
+      "id": "tsconfig_node_json",
+      "community": 2,
+      "norm_label": "tsconfig.node.json"
+    },
+    {
+      "label": "compilerOptions",
+      "file_type": "code",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L2",
+      "id": "releaf_rahul_tsconfig_node_compileroptions",
+      "community": 2,
+      "norm_label": "compileroptions"
+    },
+    {
+      "label": "tsBuildInfoFile",
+      "file_type": "code",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L3",
+      "id": "releaf_rahul_tsconfig_node_compileroptions_tsbuildinfofile",
+      "community": 2,
+      "norm_label": "tsbuildinfofile"
+    },
+    {
+      "label": "target",
+      "file_type": "code",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L4",
+      "id": "releaf_rahul_tsconfig_node_compileroptions_target",
+      "community": 2,
+      "norm_label": "target"
+    },
+    {
+      "label": "lib",
+      "file_type": "code",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L5",
+      "id": "releaf_rahul_tsconfig_node_compileroptions_lib",
+      "community": 2,
+      "norm_label": "lib"
+    },
+    {
+      "label": "module",
+      "file_type": "code",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L6",
+      "id": "releaf_rahul_tsconfig_node_compileroptions_module",
+      "community": 2,
+      "norm_label": "module"
+    },
+    {
+      "label": "types",
+      "file_type": "code",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L7",
+      "id": "releaf_rahul_tsconfig_node_compileroptions_types",
+      "community": 2,
+      "norm_label": "types"
+    },
+    {
+      "label": "skipLibCheck",
+      "file_type": "code",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L8",
+      "id": "releaf_rahul_tsconfig_node_compileroptions_skiplibcheck",
+      "community": 2,
+      "norm_label": "skiplibcheck"
+    },
+    {
+      "label": "moduleResolution",
+      "file_type": "code",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L11",
+      "id": "releaf_rahul_tsconfig_node_compileroptions_moduleresolution",
+      "community": 2,
+      "norm_label": "moduleresolution"
+    },
+    {
+      "label": "allowImportingTsExtensions",
+      "file_type": "code",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L12",
+      "id": "releaf_rahul_tsconfig_node_compileroptions_allowimportingtsextensions",
+      "community": 2,
+      "norm_label": "allowimportingtsextensions"
+    },
+    {
+      "label": "verbatimModuleSyntax",
+      "file_type": "code",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L13",
+      "id": "releaf_rahul_tsconfig_node_compileroptions_verbatimmodulesyntax",
+      "community": 2,
+      "norm_label": "verbatimmodulesyntax"
+    },
+    {
+      "label": "moduleDetection",
+      "file_type": "code",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L14",
+      "id": "releaf_rahul_tsconfig_node_compileroptions_moduledetection",
+      "community": 2,
+      "norm_label": "moduledetection"
+    },
+    {
+      "label": "noEmit",
+      "file_type": "code",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L15",
+      "id": "releaf_rahul_tsconfig_node_compileroptions_noemit",
+      "community": 2,
+      "norm_label": "noemit"
+    },
+    {
+      "label": "noUnusedLocals",
+      "file_type": "code",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L18",
+      "id": "releaf_rahul_tsconfig_node_compileroptions_nounusedlocals",
+      "community": 2,
+      "norm_label": "nounusedlocals"
+    },
+    {
+      "label": "noUnusedParameters",
+      "file_type": "code",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L19",
+      "id": "releaf_rahul_tsconfig_node_compileroptions_nounusedparameters",
+      "community": 2,
+      "norm_label": "nounusedparameters"
+    },
+    {
+      "label": "erasableSyntaxOnly",
+      "file_type": "code",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L20",
+      "id": "releaf_rahul_tsconfig_node_compileroptions_erasablesyntaxonly",
+      "community": 2,
+      "norm_label": "erasablesyntaxonly"
+    },
+    {
+      "label": "noFallthroughCasesInSwitch",
+      "file_type": "code",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L21",
+      "id": "releaf_rahul_tsconfig_node_compileroptions_nofallthroughcasesinswitch",
+      "community": 2,
+      "norm_label": "nofallthroughcasesinswitch"
+    },
+    {
+      "label": "include",
+      "file_type": "code",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L23",
+      "id": "releaf_rahul_tsconfig_node_include",
+      "community": 2,
+      "norm_label": "include"
+    },
+    {
+      "label": "vercel.json",
+      "file_type": "code",
+      "source_file": "vercel.json",
+      "source_location": "L1",
+      "id": "vercel_json",
+      "community": 11,
+      "norm_label": "vercel.json"
+    },
+    {
+      "label": "rewrites",
+      "file_type": "code",
+      "source_file": "vercel.json",
+      "source_location": "L2",
+      "id": "releaf_rahul_vercel_rewrites",
+      "community": 11,
+      "norm_label": "rewrites"
+    },
+    {
+      "label": "vite.config.ts",
+      "file_type": "code",
+      "source_file": "vite.config.ts",
+      "source_location": "L1",
+      "id": "vite_config_ts",
+      "community": 13,
+      "norm_label": "vite.config.ts"
+    },
+    {
+      "label": "App.tsx",
+      "file_type": "code",
+      "source_file": "src/App.tsx",
+      "source_location": "L1",
+      "id": "src_app_tsx",
+      "community": 0,
+      "norm_label": "app.tsx"
+    },
+    {
+      "label": "App()",
+      "file_type": "code",
+      "source_file": "src/App.tsx",
+      "source_location": "L14",
+      "id": "src_app_app",
+      "community": 0,
+      "norm_label": "app()"
+    },
+    {
+      "label": "main.tsx",
+      "file_type": "code",
+      "source_file": "src/main.tsx",
+      "source_location": "L1",
+      "id": "src_main_tsx",
+      "community": 0,
+      "norm_label": "main.tsx"
+    },
+    {
+      "label": "Layout.tsx",
+      "file_type": "code",
+      "source_file": "src/components/Layout.tsx",
+      "source_location": "L1",
+      "id": "src_components_layout_tsx",
+      "community": 9,
+      "norm_label": "layout.tsx"
+    },
+    {
+      "label": "Navbar()",
+      "file_type": "code",
+      "source_file": "src/components/Layout.tsx",
+      "source_location": "L7",
+      "id": "components_layout_navbar",
+      "community": 9,
+      "norm_label": "navbar()"
+    },
+    {
+      "label": "Footer()",
+      "file_type": "code",
+      "source_file": "src/components/Layout.tsx",
+      "source_location": "L144",
+      "id": "components_layout_footer",
+      "community": 9,
+      "norm_label": "footer()"
+    },
+    {
+      "label": "Layout()",
+      "file_type": "code",
+      "source_file": "src/components/Layout.tsx",
+      "source_location": "L283",
+      "id": "components_layout_layout",
+      "community": 9,
+      "norm_label": "layout()"
+    },
+    {
+      "label": "ScrollToTop.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ScrollToTop.tsx",
+      "source_location": "L1",
+      "id": "src_components_scrolltotop_tsx",
+      "community": 0,
+      "norm_label": "scrolltotop.tsx"
+    },
+    {
+      "label": "ScrollToTop()",
+      "file_type": "code",
+      "source_file": "src/components/ScrollToTop.tsx",
+      "source_location": "L4",
+      "id": "components_scrolltotop_scrolltotop",
+      "community": 0,
+      "norm_label": "scrolltotop()"
+    },
+    {
+      "label": "SectionReveal.tsx",
+      "file_type": "code",
+      "source_file": "src/components/SectionReveal.tsx",
+      "source_location": "L1",
+      "id": "src_components_sectionreveal_tsx",
+      "community": 0,
+      "norm_label": "sectionreveal.tsx"
+    },
+    {
+      "label": "SectionRevealProps",
+      "file_type": "code",
+      "source_file": "src/components/SectionReveal.tsx",
+      "source_location": "L3",
+      "id": "components_sectionreveal_sectionrevealprops",
+      "community": 0,
+      "norm_label": "sectionrevealprops"
+    },
+    {
+      "label": "SectionReveal()",
+      "file_type": "code",
+      "source_file": "src/components/SectionReveal.tsx",
+      "source_location": "L9",
+      "id": "components_sectionreveal_sectionreveal",
+      "community": 0,
+      "norm_label": "sectionreveal()"
+    },
+    {
+      "label": "WhatsAppCTA.tsx",
+      "file_type": "code",
+      "source_file": "src/components/WhatsAppCTA.tsx",
+      "source_location": "L1",
+      "id": "src_components_whatsappcta_tsx",
+      "community": 0,
+      "norm_label": "whatsappcta.tsx"
+    },
+    {
+      "label": "WhatsAppCTAProps",
+      "file_type": "code",
+      "source_file": "src/components/WhatsAppCTA.tsx",
+      "source_location": "L1",
+      "id": "components_whatsappcta_whatsappctaprops",
+      "community": 0,
+      "norm_label": "whatsappctaprops"
+    },
+    {
+      "label": "WhatsAppCTA()",
+      "file_type": "code",
+      "source_file": "src/components/WhatsAppCTA.tsx",
+      "source_location": "L7",
+      "id": "components_whatsappcta_whatsappcta",
+      "community": 0,
+      "norm_label": "whatsappcta()"
+    },
+    {
+      "label": "blogs.ts",
+      "file_type": "code",
+      "source_file": "src/data/blogs.ts",
+      "source_location": "L1",
+      "id": "src_data_blogs_ts",
+      "community": 6,
+      "norm_label": "blogs.ts"
+    },
+    {
+      "label": "BlogPost",
+      "file_type": "code",
+      "source_file": "src/data/blogs.ts",
+      "source_location": "L1",
+      "id": "data_blogs_blogpost",
+      "community": 6,
+      "norm_label": "blogpost"
+    },
+    {
+      "label": "blogPosts",
+      "file_type": "code",
+      "source_file": "src/data/blogs.ts",
+      "source_location": "L11",
+      "id": "data_blogs_blogposts",
+      "community": 6,
+      "norm_label": "blogposts"
+    },
+    {
+      "label": "BlogPage.tsx",
+      "file_type": "code",
+      "source_file": "src/pages/BlogPage.tsx",
+      "source_location": "L1",
+      "id": "src_pages_blogpage_tsx",
+      "community": 6,
+      "norm_label": "blogpage.tsx"
+    },
+    {
+      "label": "BlogPage()",
+      "file_type": "code",
+      "source_file": "src/pages/BlogPage.tsx",
+      "source_location": "L8",
+      "id": "pages_blogpage_blogpage",
+      "community": 6,
+      "norm_label": "blogpage()"
+    },
+    {
+      "label": "BlogPostPage.tsx",
+      "file_type": "code",
+      "source_file": "src/pages/BlogPostPage.tsx",
+      "source_location": "L1",
+      "id": "src_pages_blogpostpage_tsx",
+      "community": 6,
+      "norm_label": "blogpostpage.tsx"
+    },
+    {
+      "label": "BlogPostPage()",
+      "file_type": "code",
+      "source_file": "src/pages/BlogPostPage.tsx",
+      "source_location": "L8",
+      "id": "pages_blogpostpage_blogpostpage",
+      "community": 6,
+      "norm_label": "blogpostpage()"
+    },
+    {
+      "label": "BookPage.tsx",
+      "file_type": "code",
+      "source_file": "src/pages/BookPage.tsx",
+      "source_location": "L1",
+      "id": "src_pages_bookpage_tsx",
+      "community": 0,
+      "norm_label": "bookpage.tsx"
+    },
+    {
+      "label": "BookPage()",
+      "file_type": "code",
+      "source_file": "src/pages/BookPage.tsx",
+      "source_location": "L7",
+      "id": "pages_bookpage_bookpage",
+      "community": 0,
+      "norm_label": "bookpage()"
+    },
+    {
+      "label": "ConditionPage.tsx",
+      "file_type": "code",
+      "source_file": "src/pages/ConditionPage.tsx",
+      "source_location": "L1",
+      "id": "src_pages_conditionpage_tsx",
+      "community": 0,
+      "norm_label": "conditionpage.tsx"
+    },
+    {
+      "label": "ConditionData",
+      "file_type": "code",
+      "source_file": "src/pages/ConditionPage.tsx",
+      "source_location": "L9",
+      "id": "pages_conditionpage_conditiondata",
+      "community": 0,
+      "norm_label": "conditiondata"
+    },
+    {
+      "label": "conditions",
+      "file_type": "code",
+      "source_file": "src/pages/ConditionPage.tsx",
+      "source_location": "L22",
+      "id": "pages_conditionpage_conditions",
+      "community": 0,
+      "norm_label": "conditions"
+    },
+    {
+      "label": "FAQItem()",
+      "file_type": "code",
+      "source_file": "src/pages/ConditionPage.tsx",
+      "source_location": "L177",
+      "id": "pages_conditionpage_faqitem",
+      "community": 0,
+      "norm_label": "faqitem()"
+    },
+    {
+      "label": "ConditionPage()",
+      "file_type": "code",
+      "source_file": "src/pages/ConditionPage.tsx",
+      "source_location": "L205",
+      "id": "pages_conditionpage_conditionpage",
+      "community": 0,
+      "norm_label": "conditionpage()"
+    },
+    {
+      "label": "HomePage.tsx",
+      "file_type": "code",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L1",
+      "id": "src_pages_homepage_tsx",
+      "community": 5,
+      "norm_label": "homepage.tsx"
+    },
+    {
+      "label": "HeroSection()",
+      "file_type": "code",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L8",
+      "id": "pages_homepage_herosection",
+      "community": 5,
+      "norm_label": "herosection()"
+    },
+    {
+      "label": "TrustStrip()",
+      "file_type": "code",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L79",
+      "id": "pages_homepage_truststrip",
+      "community": 5,
+      "norm_label": "truststrip()"
+    },
+    {
+      "label": "StoryIntro()",
+      "file_type": "code",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L101",
+      "id": "pages_homepage_storyintro",
+      "community": 5,
+      "norm_label": "storyintro()"
+    },
+    {
+      "label": "SelfSelection()",
+      "file_type": "code",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L131",
+      "id": "pages_homepage_selfselection",
+      "community": 5,
+      "norm_label": "selfselection()"
+    },
+    {
+      "label": "ServicesOverview()",
+      "file_type": "code",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L191",
+      "id": "pages_homepage_servicesoverview",
+      "community": 5,
+      "norm_label": "servicesoverview()"
+    },
+    {
+      "label": "Testimonials()",
+      "file_type": "code",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L263",
+      "id": "pages_homepage_testimonials",
+      "community": 5,
+      "norm_label": "testimonials()"
+    },
+    {
+      "label": "Credentials()",
+      "file_type": "code",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L315",
+      "id": "pages_homepage_credentials",
+      "community": 5,
+      "norm_label": "credentials()"
+    },
+    {
+      "label": "PricingPreview()",
+      "file_type": "code",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L359",
+      "id": "pages_homepage_pricingpreview",
+      "community": 5,
+      "norm_label": "pricingpreview()"
+    },
+    {
+      "label": "BlogPreview()",
+      "file_type": "code",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L406",
+      "id": "pages_homepage_blogpreview",
+      "community": 5,
+      "norm_label": "blogpreview()"
+    },
+    {
+      "label": "FinalCTA()",
+      "file_type": "code",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L457",
+      "id": "pages_homepage_finalcta",
+      "community": 5,
+      "norm_label": "finalcta()"
+    },
+    {
+      "label": "HomePage()",
+      "file_type": "code",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L487",
+      "id": "pages_homepage_homepage",
+      "community": 5,
+      "norm_label": "homepage()"
+    },
+    {
+      "label": "HowIHelpPage.tsx",
+      "file_type": "code",
+      "source_file": "src/pages/HowIHelpPage.tsx",
+      "source_location": "L1",
+      "id": "src_pages_howihelppage_tsx",
+      "community": 0,
+      "norm_label": "howihelppage.tsx"
+    },
+    {
+      "label": "HowIHelpPage()",
+      "file_type": "code",
+      "source_file": "src/pages/HowIHelpPage.tsx",
+      "source_location": "L7",
+      "id": "pages_howihelppage_howihelppage",
+      "community": 0,
+      "norm_label": "howihelppage()"
+    },
+    {
+      "label": "MyStoryPage.tsx",
+      "file_type": "code",
+      "source_file": "src/pages/MyStoryPage.tsx",
+      "source_location": "L1",
+      "id": "src_pages_mystorypage_tsx",
+      "community": 0,
+      "norm_label": "mystorypage.tsx"
+    },
+    {
+      "label": "SobrietyCounter()",
+      "file_type": "code",
+      "source_file": "src/pages/MyStoryPage.tsx",
+      "source_location": "L7",
+      "id": "pages_mystorypage_sobrietycounter",
+      "community": 0,
+      "norm_label": "sobrietycounter()"
+    },
+    {
+      "label": "MyStoryPage()",
+      "file_type": "code",
+      "source_file": "src/pages/MyStoryPage.tsx",
+      "source_location": "L27",
+      "id": "pages_mystorypage_mystorypage",
+      "community": 0,
+      "norm_label": "mystorypage()"
+    },
+    {
+      "label": "StoriesPage.tsx",
+      "file_type": "code",
+      "source_file": "src/pages/StoriesPage.tsx",
+      "source_location": "L1",
+      "id": "src_pages_storiespage_tsx",
+      "community": 0,
+      "norm_label": "storiespage.tsx"
+    },
+    {
+      "label": "stories",
+      "file_type": "code",
+      "source_file": "src/pages/StoriesPage.tsx",
+      "source_location": "L7",
+      "id": "pages_storiespage_stories",
+      "community": 0,
+      "norm_label": "stories"
+    },
+    {
+      "label": "StoriesPage()",
+      "file_type": "code",
+      "source_file": "src/pages/StoriesPage.tsx",
+      "source_location": "L46",
+      "id": "pages_storiespage_storiespage",
+      "community": 0,
+      "norm_label": "storiespage()"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "readme_md",
+      "community": 8,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "React + TypeScript + Vite",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "releaf_rahul_readme_react_typescript_vite",
+      "community": 8,
+      "norm_label": "react + typescript + vite"
+    },
+    {
+      "label": "React Compiler",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L10",
+      "id": "releaf_rahul_readme_react_compiler",
+      "community": 8,
+      "norm_label": "react compiler"
+    },
+    {
+      "label": "Expanding the ESLint configuration",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L14",
+      "id": "releaf_rahul_readme_expanding_the_eslint_configuration",
+      "community": 8,
+      "norm_label": "expanding the eslint configuration"
+    },
+    {
+      "label": "code:js (export default defineConfig([)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L18",
+      "id": "releaf_rahul_readme_codeblock_1",
+      "community": 8,
+      "norm_label": "code:js (export default defineconfig([)"
+    },
+    {
+      "label": "code:js (// eslint.config.js)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L48",
+      "id": "releaf_rahul_readme_codeblock_2",
+      "community": 8,
+      "norm_label": "code:js (// eslint.config.js)"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "extractBlogs.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "extractblogs_js",
+      "target": "releaf_rahul_extractblogs_files",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "extractBlogs.js",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "extractblogs_js",
+      "target": "releaf_rahul_extractblogs_filepath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "extractBlogs.js",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "extractblogs_js",
+      "target": "releaf_rahul_extractblogs_content",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "extractBlogs.js",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "extractblogs_js",
+      "target": "releaf_rahul_extractblogs_parts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "extractBlogs.js",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "extractblogs_js",
+      "target": "releaf_rahul_extractblogs_bodycontent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "package_json",
+      "target": "releaf_rahul_package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "package_json",
+      "target": "releaf_rahul_package_private",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "package_json",
+      "target": "releaf_rahul_package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "package_json",
+      "target": "releaf_rahul_package_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "package_json",
+      "target": "releaf_rahul_package_scripts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "package_json",
+      "target": "releaf_rahul_package_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "package_json",
+      "target": "releaf_rahul_package_devdependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "releaf_rahul_package_scripts",
+      "target": "releaf_rahul_package_scripts_dev",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "releaf_rahul_package_scripts",
+      "target": "releaf_rahul_package_scripts_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "releaf_rahul_package_scripts",
+      "target": "releaf_rahul_package_scripts_lint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "releaf_rahul_package_scripts",
+      "target": "releaf_rahul_package_scripts_preview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "releaf_rahul_package_dependencies",
+      "target": "releaf_rahul_package_dependencies_lucide_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "releaf_rahul_package_dependencies",
+      "target": "releaf_rahul_package_dependencies_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "releaf_rahul_package_dependencies",
+      "target": "releaf_rahul_package_dependencies_react_dom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "releaf_rahul_package_dependencies",
+      "target": "releaf_rahul_package_dependencies_react_helmet_async",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "releaf_rahul_package_dependencies",
+      "target": "releaf_rahul_package_dependencies_react_markdown",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "releaf_rahul_package_dependencies",
+      "target": "releaf_rahul_package_dependencies_react_router_dom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "releaf_rahul_package_devdependencies",
+      "target": "releaf_rahul_package_devdependencies_eslint_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "releaf_rahul_package_devdependencies",
+      "target": "releaf_rahul_package_devdependencies_tailwindcss_vite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "releaf_rahul_package_devdependencies",
+      "target": "releaf_rahul_package_devdependencies_types_node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "releaf_rahul_package_devdependencies",
+      "target": "releaf_rahul_package_devdependencies_types_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "releaf_rahul_package_devdependencies",
+      "target": "releaf_rahul_package_devdependencies_types_react_dom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "releaf_rahul_package_devdependencies",
+      "target": "releaf_rahul_package_devdependencies_vitejs_plugin_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "releaf_rahul_package_devdependencies",
+      "target": "releaf_rahul_package_devdependencies_eslint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "releaf_rahul_package_devdependencies",
+      "target": "releaf_rahul_package_devdependencies_eslint_plugin_react_hooks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "releaf_rahul_package_devdependencies",
+      "target": "releaf_rahul_package_devdependencies_eslint_plugin_react_refresh",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "releaf_rahul_package_devdependencies",
+      "target": "releaf_rahul_package_devdependencies_globals",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "releaf_rahul_package_devdependencies",
+      "target": "releaf_rahul_package_devdependencies_tailwindcss",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "releaf_rahul_package_devdependencies",
+      "target": "releaf_rahul_package_devdependencies_typescript",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "releaf_rahul_package_devdependencies",
+      "target": "releaf_rahul_package_devdependencies_typescript_eslint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "releaf_rahul_package_devdependencies",
+      "target": "releaf_rahul_package_devdependencies_vite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "tsconfig_app_json",
+      "target": "releaf_rahul_tsconfig_app_compileroptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "tsconfig_app_json",
+      "target": "releaf_rahul_tsconfig_app_include",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "releaf_rahul_tsconfig_app_compileroptions",
+      "target": "releaf_rahul_tsconfig_app_compileroptions_tsbuildinfofile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "releaf_rahul_tsconfig_app_compileroptions",
+      "target": "releaf_rahul_tsconfig_app_compileroptions_target",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "releaf_rahul_tsconfig_app_compileroptions",
+      "target": "releaf_rahul_tsconfig_app_compileroptions_lib",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "releaf_rahul_tsconfig_app_compileroptions",
+      "target": "releaf_rahul_tsconfig_app_compileroptions_module",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "releaf_rahul_tsconfig_app_compileroptions",
+      "target": "releaf_rahul_tsconfig_app_compileroptions_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "releaf_rahul_tsconfig_app_compileroptions",
+      "target": "releaf_rahul_tsconfig_app_compileroptions_skiplibcheck",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "releaf_rahul_tsconfig_app_compileroptions",
+      "target": "releaf_rahul_tsconfig_app_compileroptions_moduleresolution",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "releaf_rahul_tsconfig_app_compileroptions",
+      "target": "releaf_rahul_tsconfig_app_compileroptions_allowimportingtsextensions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "releaf_rahul_tsconfig_app_compileroptions",
+      "target": "releaf_rahul_tsconfig_app_compileroptions_verbatimmodulesyntax",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "releaf_rahul_tsconfig_app_compileroptions",
+      "target": "releaf_rahul_tsconfig_app_compileroptions_moduledetection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "releaf_rahul_tsconfig_app_compileroptions",
+      "target": "releaf_rahul_tsconfig_app_compileroptions_noemit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "releaf_rahul_tsconfig_app_compileroptions",
+      "target": "releaf_rahul_tsconfig_app_compileroptions_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "releaf_rahul_tsconfig_app_compileroptions",
+      "target": "releaf_rahul_tsconfig_app_compileroptions_nounusedlocals",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "releaf_rahul_tsconfig_app_compileroptions",
+      "target": "releaf_rahul_tsconfig_app_compileroptions_nounusedparameters",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "releaf_rahul_tsconfig_app_compileroptions",
+      "target": "releaf_rahul_tsconfig_app_compileroptions_erasablesyntaxonly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.app.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "releaf_rahul_tsconfig_app_compileroptions",
+      "target": "releaf_rahul_tsconfig_app_compileroptions_nofallthroughcasesinswitch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "tsconfig_json",
+      "target": "releaf_rahul_tsconfig_files",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "tsconfig_json",
+      "target": "releaf_rahul_tsconfig_references",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "tsconfig_node_json",
+      "target": "releaf_rahul_tsconfig_node_compileroptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "tsconfig_node_json",
+      "target": "releaf_rahul_tsconfig_node_include",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "releaf_rahul_tsconfig_node_compileroptions",
+      "target": "releaf_rahul_tsconfig_node_compileroptions_tsbuildinfofile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "releaf_rahul_tsconfig_node_compileroptions",
+      "target": "releaf_rahul_tsconfig_node_compileroptions_target",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "releaf_rahul_tsconfig_node_compileroptions",
+      "target": "releaf_rahul_tsconfig_node_compileroptions_lib",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "releaf_rahul_tsconfig_node_compileroptions",
+      "target": "releaf_rahul_tsconfig_node_compileroptions_module",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "releaf_rahul_tsconfig_node_compileroptions",
+      "target": "releaf_rahul_tsconfig_node_compileroptions_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "releaf_rahul_tsconfig_node_compileroptions",
+      "target": "releaf_rahul_tsconfig_node_compileroptions_skiplibcheck",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "releaf_rahul_tsconfig_node_compileroptions",
+      "target": "releaf_rahul_tsconfig_node_compileroptions_moduleresolution",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "releaf_rahul_tsconfig_node_compileroptions",
+      "target": "releaf_rahul_tsconfig_node_compileroptions_allowimportingtsextensions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "releaf_rahul_tsconfig_node_compileroptions",
+      "target": "releaf_rahul_tsconfig_node_compileroptions_verbatimmodulesyntax",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "releaf_rahul_tsconfig_node_compileroptions",
+      "target": "releaf_rahul_tsconfig_node_compileroptions_moduledetection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "releaf_rahul_tsconfig_node_compileroptions",
+      "target": "releaf_rahul_tsconfig_node_compileroptions_noemit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "releaf_rahul_tsconfig_node_compileroptions",
+      "target": "releaf_rahul_tsconfig_node_compileroptions_nounusedlocals",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "releaf_rahul_tsconfig_node_compileroptions",
+      "target": "releaf_rahul_tsconfig_node_compileroptions_nounusedparameters",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "releaf_rahul_tsconfig_node_compileroptions",
+      "target": "releaf_rahul_tsconfig_node_compileroptions_erasablesyntaxonly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.node.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "releaf_rahul_tsconfig_node_compileroptions",
+      "target": "releaf_rahul_tsconfig_node_compileroptions_nofallthroughcasesinswitch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vercel.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "vercel_json",
+      "target": "releaf_rahul_vercel_rewrites",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_app_tsx",
+      "target": "src_components_layout_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_app_tsx",
+      "target": "src_pages_homepage_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_app_tsx",
+      "target": "src_pages_mystorypage_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_app_tsx",
+      "target": "src_pages_howihelppage_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_app_tsx",
+      "target": "src_pages_bookpage_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_app_tsx",
+      "target": "src_pages_storiespage_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_app_tsx",
+      "target": "src_pages_blogpage_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "src_app_tsx",
+      "target": "src_pages_blogpostpage_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "src_app_tsx",
+      "target": "src_pages_conditionpage_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "src_app_tsx",
+      "target": "src_components_scrolltotop_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "src_app_tsx",
+      "target": "src_app_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_main_tsx",
+      "target": "src_app_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Layout.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_components_layout_tsx",
+      "target": "src_components_whatsappcta_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Layout.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_components_layout_tsx",
+      "target": "components_layout_navbar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Layout.tsx",
+      "source_location": "L144",
+      "weight": 1.0,
+      "source": "src_components_layout_tsx",
+      "target": "components_layout_footer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Layout.tsx",
+      "source_location": "L283",
+      "weight": 1.0,
+      "source": "src_components_layout_tsx",
+      "target": "components_layout_layout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ScrollToTop.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_components_scrolltotop_tsx",
+      "target": "components_scrolltotop_scrolltotop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/SectionReveal.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_components_sectionreveal_tsx",
+      "target": "components_sectionreveal_sectionrevealprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/SectionReveal.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_components_sectionreveal_tsx",
+      "target": "components_sectionreveal_sectionreveal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/BlogPage.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_pages_blogpage_tsx",
+      "target": "src_components_sectionreveal_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/BookPage.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_pages_bookpage_tsx",
+      "target": "src_components_sectionreveal_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ConditionPage.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_pages_conditionpage_tsx",
+      "target": "src_components_sectionreveal_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_pages_homepage_tsx",
+      "target": "src_components_sectionreveal_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/HowIHelpPage.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_pages_howihelppage_tsx",
+      "target": "src_components_sectionreveal_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/MyStoryPage.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_pages_mystorypage_tsx",
+      "target": "src_components_sectionreveal_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/StoriesPage.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_pages_storiespage_tsx",
+      "target": "src_components_sectionreveal_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/WhatsAppCTA.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_components_whatsappcta_tsx",
+      "target": "components_whatsappcta_whatsappctaprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/WhatsAppCTA.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_components_whatsappcta_tsx",
+      "target": "components_whatsappcta_whatsappcta",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/BlogPage.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_pages_blogpage_tsx",
+      "target": "src_components_whatsappcta_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/BlogPostPage.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_pages_blogpostpage_tsx",
+      "target": "src_components_whatsappcta_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/BookPage.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_pages_bookpage_tsx",
+      "target": "src_components_whatsappcta_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ConditionPage.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_pages_conditionpage_tsx",
+      "target": "src_components_whatsappcta_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_pages_homepage_tsx",
+      "target": "src_components_whatsappcta_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/HowIHelpPage.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_pages_howihelppage_tsx",
+      "target": "src_components_whatsappcta_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/MyStoryPage.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_pages_mystorypage_tsx",
+      "target": "src_components_whatsappcta_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/StoriesPage.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_pages_storiespage_tsx",
+      "target": "src_components_whatsappcta_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data/blogs.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_data_blogs_ts",
+      "target": "data_blogs_blogpost",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data/blogs.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "src_data_blogs_ts",
+      "target": "data_blogs_blogposts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/BlogPage.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_pages_blogpage_tsx",
+      "target": "src_data_blogs_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/BlogPostPage.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_pages_blogpostpage_tsx",
+      "target": "src_data_blogs_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/BlogPage.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_pages_blogpage_tsx",
+      "target": "data_blogs_blogposts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/BlogPostPage.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_pages_blogpostpage_tsx",
+      "target": "data_blogs_blogposts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/BlogPage.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_pages_blogpage_tsx",
+      "target": "pages_blogpage_blogpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/BlogPostPage.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_pages_blogpostpage_tsx",
+      "target": "pages_blogpostpage_blogpostpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/BookPage.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_pages_bookpage_tsx",
+      "target": "pages_bookpage_bookpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ConditionPage.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_pages_conditionpage_tsx",
+      "target": "pages_conditionpage_conditiondata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ConditionPage.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "src_pages_conditionpage_tsx",
+      "target": "pages_conditionpage_conditions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ConditionPage.tsx",
+      "source_location": "L177",
+      "weight": 1.0,
+      "source": "src_pages_conditionpage_tsx",
+      "target": "pages_conditionpage_faqitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/ConditionPage.tsx",
+      "source_location": "L205",
+      "weight": 1.0,
+      "source": "src_pages_conditionpage_tsx",
+      "target": "pages_conditionpage_conditionpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_pages_homepage_tsx",
+      "target": "pages_homepage_herosection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "src_pages_homepage_tsx",
+      "target": "pages_homepage_truststrip",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L101",
+      "weight": 1.0,
+      "source": "src_pages_homepage_tsx",
+      "target": "pages_homepage_storyintro",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L131",
+      "weight": 1.0,
+      "source": "src_pages_homepage_tsx",
+      "target": "pages_homepage_selfselection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L191",
+      "weight": 1.0,
+      "source": "src_pages_homepage_tsx",
+      "target": "pages_homepage_servicesoverview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L263",
+      "weight": 1.0,
+      "source": "src_pages_homepage_tsx",
+      "target": "pages_homepage_testimonials",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L315",
+      "weight": 1.0,
+      "source": "src_pages_homepage_tsx",
+      "target": "pages_homepage_credentials",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L359",
+      "weight": 1.0,
+      "source": "src_pages_homepage_tsx",
+      "target": "pages_homepage_pricingpreview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L406",
+      "weight": 1.0,
+      "source": "src_pages_homepage_tsx",
+      "target": "pages_homepage_blogpreview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L457",
+      "weight": 1.0,
+      "source": "src_pages_homepage_tsx",
+      "target": "pages_homepage_finalcta",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/HomePage.tsx",
+      "source_location": "L487",
+      "weight": 1.0,
+      "source": "src_pages_homepage_tsx",
+      "target": "pages_homepage_homepage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/HowIHelpPage.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_pages_howihelppage_tsx",
+      "target": "pages_howihelppage_howihelppage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/MyStoryPage.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_pages_mystorypage_tsx",
+      "target": "pages_mystorypage_sobrietycounter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/MyStoryPage.tsx",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "src_pages_mystorypage_tsx",
+      "target": "pages_mystorypage_mystorypage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/StoriesPage.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_pages_storiespage_tsx",
+      "target": "pages_storiespage_stories",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/StoriesPage.tsx",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "src_pages_storiespage_tsx",
+      "target": "pages_storiespage_storiespage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "readme_md",
+      "target": "releaf_rahul_readme_react_typescript_vite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "releaf_rahul_readme_react_typescript_vite",
+      "target": "releaf_rahul_readme_react_compiler",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "releaf_rahul_readme_react_typescript_vite",
+      "target": "releaf_rahul_readme_expanding_the_eslint_configuration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "releaf_rahul_readme_expanding_the_eslint_configuration",
+      "target": "releaf_rahul_readme_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "releaf_rahul_readme_expanding_the_eslint_configuration",
+      "target": "releaf_rahul_readme_codeblock_2",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": []
+}
