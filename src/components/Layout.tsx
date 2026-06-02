@@ -155,7 +155,7 @@ function Footer() {
               <img src="/releaf-logo.png" alt="Releaf" className="h-12 w-auto object-contain brightness-0 invert" />
             </div>
             <p className="text-sm leading-relaxed mb-4">
-              Sobriety coaching from someone who has walked this road. I'm Rahul Seth — 8 years sober, certified CBT & REBT therapist.
+              Sobriety coaching from someone who has walked this road. I'm Rahul Seth — 10 years sober, certified CBT & REBT therapist.
             </p>
             <WhatsAppCTA size="sm" />
           </div>
@@ -242,7 +242,7 @@ function Footer() {
             '@type': 'Person',
             name: 'Rahul Seth',
             jobTitle: 'Sobriety Coach & Certified Guidance Counsellor',
-            description: 'Sobriety coach with 8 years of personal recovery experience. Certified CBT & REBT therapist helping individuals across India.',
+            description: 'Sobriety coach with 10 years of personal recovery experience. Certified CBT & REBT therapist helping individuals across India.',
             url: 'https://releaf.co.in',
             telephone: '+919820281442',
             address: {

@@ -24,7 +24,7 @@ const conditions: Record<string, ConditionData> = {
     title: 'Alcohol Addiction',
     slug: 'alcohol',
     seoTitle: 'Alcohol Addiction Help in Mumbai & India | Releaf — Rahul Seth',
-    metaDesc: 'Struggling with alcohol? I\'ve been there. Personal sobriety coaching from someone who understands — 8 years sober, certified CBT coach. Free 30-min call.',
+    metaDesc: 'Struggling with alcohol? I\'ve been there. Personal sobriety coaching from someone who understands — 10 years sober, certified CBT coach. Free 30-min call.',
     opening: 'Alcohol doesn\'t announce itself as a problem. It creeps in — one extra drink, one more reason to open the bottle, one more morning you wish you hadn\'t.',
     noteFromRahul: 'I know what alcohol dependency feels like from the inside — not from a textbook. I spent years believing I had it under control, even as my life told a different story. When I finally got help, I found that the shame I felt was the biggest barrier, not the alcohol itself. That experience is now at the heart of how I work with anyone going through the same thing.',
     understanding: [

@@ -28,12 +28,12 @@ export default function MyStoryPage() {
   return (
     <>
       <Helmet>
-        <title>My Story — Rahul Seth, 8 Years Sober | Sobriety Coach India | Releaf</title>
+        <title>My Story — Rahul Seth, 10 Years Sober | Sobriety Coach India | Releaf</title>
         <meta
           name="description"
-          content="On 28 November 2016, I chose sobriety. Today, 8 years later, I help others find the same freedom. Read Rahul Seth's personal recovery story and how it shaped Releaf."
+          content="On 28 November 2016, I chose sobriety. Today, 10 years later, I help others find the same freedom. Read Rahul Seth's personal recovery story and how it shaped Releaf."
         />
-        <meta property="og:title" content="My Story — Rahul Seth, 8 Years Sober | Sobriety Coach India" />
+        <meta property="og:title" content="My Story — Rahul Seth, 10 Years Sober | Sobriety Coach India" />
         <meta property="og:url" content="https://releaf.co.in/my-story/" />
         <link rel="canonical" href="https://releaf.co.in/my-story/" />
       </Helmet>
@@ -47,7 +47,7 @@ export default function MyStoryPage() {
             <em className="font-display italic text-sage">I chose sobriety.</em>
           </h1>
           <p className="text-lg text-white/60 font-light max-w-2xl mb-8 leading-relaxed">
-            Today, 8 years later, I help others find the same freedom. This is my story — the real one.
+            Today, 10 years later, I help others find the same freedom. This is my story — the real one.
           </p>
           <SobrietyCounter />
         </div>

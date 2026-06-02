@@ -12,7 +12,7 @@ export default function BlogPage() {
         <title>Blog — Sobriety, Recovery & Coaching Insights | Releaf — Rahul Seth</title>
         <meta
           name="description"
-          content="Honest articles about sobriety, recovery, and the journey to a better life. Written by Rahul Seth — sobriety coach, 8 years sober."
+          content="Honest articles about sobriety, recovery, and the journey to a better life. Written by Rahul Seth — sobriety coach, 10 years sober."
         />
         <meta property="og:title" content="Blog — Sobriety, Recovery & Coaching Insights | Releaf" />
         <meta property="og:url" content="https://releaf.co.in/blog/" />

@@ -62,7 +62,7 @@ function HeroSection() {
           />
           <div className="text-left">
             <p className="text-white text-sm font-medium">Rahul Seth</p>
-            <p className="text-white/50 text-xs">8 years sober · Certified CBT coach</p>
+            <p className="text-white/50 text-xs">10 years sober · Certified CBT coach</p>
           </div>
         </div>
       </div>
@@ -78,7 +78,7 @@ function HeroSection() {
 /* ═══════════════════════════ TRUST STRIP ═══════════════════════════ */
 function TrustStrip() {
   const facts = [
-    { icon: <Clock className="w-5 h-5" />, text: '8 Years Sober' },
+    { icon: <Clock className="w-5 h-5" />, text: '10 Years Sober' },
     { icon: <Award className="w-5 h-5" />, text: 'Certified CBT & REBT' },
     { icon: <Users className="w-5 h-5" />, text: 'Online Across India' },
   ]
@@ -111,7 +111,7 @@ function StoryIntro() {
             />
             <div>
               <blockquote className="font-display text-xl sm:text-2xl text-leaf leading-relaxed italic mb-6">
-                "On 28 November 2016, I made a decision that changed my life. I chose sobriety. Today, 8 years later, I help others find the same freedom."
+                "On 28 November 2016, I made a decision that changed my life. I chose sobriety. Today, 10 years later, I help others find the same freedom."
               </blockquote>
               <Link
                 to="/my-story"
@@ -491,10 +491,10 @@ export default function HomePage() {
         <title>Sober Coach in Mumbai & Online India | Releaf — Rahul Seth</title>
         <meta
           name="description"
-          content="I've been where you are. 8 years sober, certified CBT coach. Personalised sobriety coaching, sober companion support, and rehab transition guidance across India. Free 30-min consultation."
+          content="I've been where you are. 10 years sober, certified CBT coach. Personalised sobriety coaching, sober companion support, and rehab transition guidance across India. Free 30-min consultation."
         />
         <meta property="og:title" content="Sober Coach in Mumbai & Online India | Releaf — Rahul Seth" />
-        <meta property="og:description" content="Sobriety coaching from someone who has been exactly where you are. 8 years sober, certified CBT & REBT coach." />
+        <meta property="og:description" content="Sobriety coaching from someone who has been exactly where you are. 10 years sober, certified CBT & REBT coach." />
         <meta property="og:url" content="https://releaf.co.in/" />
         <link rel="canonical" href="https://releaf.co.in/" />
       </Helmet>
