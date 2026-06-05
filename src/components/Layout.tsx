@@ -209,6 +209,10 @@ function Footer() {
                 <a href="https://wa.me/919820281442" className="hover:text-white transition-colors">+91 98202 81442</a>
               </li>
               <li>
+                <span className="text-white/40 block text-xs uppercase tracking-wider mb-1">Email</span>
+                <a href="mailto:rahul@releaf.co.in" className="hover:text-white transition-colors">rahul@releaf.co.in</a>
+              </li>
+              <li>
                 <span className="text-white/40 block text-xs uppercase tracking-wider mb-1">Location</span>
                 Mumbai, India · Online across India
               </li>
