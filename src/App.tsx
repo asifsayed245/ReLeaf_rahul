@@ -9,6 +9,7 @@ import StoriesPage from './pages/StoriesPage'
 import BlogPage from './pages/BlogPage'
 import BlogPostPage from './pages/BlogPostPage'
 import ConditionPage from './pages/ConditionPage'
+import SitemapPage from './pages/SitemapPage'
 import ScrollToTop from './components/ScrollToTop'
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
           <Route path="blog" element={<BlogPage />} />
           <Route path="blog/:slug" element={<BlogPostPage />} />
           <Route path="what-i-treat/:condition" element={<ConditionPage />} />
+          <Route path="sitemap" element={<SitemapPage />} />
         </Route>
       </Routes>
     </>

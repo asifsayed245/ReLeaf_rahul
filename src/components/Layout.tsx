@@ -170,6 +170,7 @@ function Footer() {
                 { label: 'Book a Free Call', to: '/book' },
                 { label: 'Stories', to: '/stories' },
                 { label: 'Blog', to: '/blog' },
+                { label: 'Sitemap', to: '/sitemap' },
               ].map((link) => (
                 <li key={link.to}>
                   <Link to={link.to} className="text-sm hover:text-white transition-colors duration-200">
