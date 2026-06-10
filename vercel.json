@@ -14,8 +14,7 @@
     }
   ],
   "redirects": [
-    { "source": "/sitemap/xml", "destination": "/sitemap.xml", "permanent": true },
-    { "source": "/sitemap", "destination": "/sitemap.xml", "permanent": true }
+    { "source": "/sitemap/xml", "destination": "/sitemap.xml", "permanent": true }
   ],
   "rewrites": [
     { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
