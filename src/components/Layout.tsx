@@ -152,7 +152,7 @@ function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center mb-4">
-              <img src="/releaf-logo.png" alt="Releaf" className="h-12 w-auto object-contain brightness-0 invert" />
+              <img src="/releaf-logo.png" alt="Releaf" className="h-12 w-auto object-contain" />
             </div>
             <p className="text-sm leading-relaxed mb-4">
               Sobriety coaching from someone who has walked this road. I'm Rahul Seth — 10 years sober, certified CBT & REBT therapist.
@@ -267,7 +267,11 @@ function Footer() {
               'Rehab Transition Support',
               'Mental Health Counselling',
             ],
-            sameAs: ['https://wa.me/919820281442'],
+            sameAs: [
+              'https://wa.me/919820281442',
+              'https://www.linkedin.com/in/rahulseth',
+              'https://www.instagram.com/releaf.co.in'
+            ],
           }),
         }}
       />
