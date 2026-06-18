@@ -24,6 +24,7 @@
   background: var(--admin-bg);
   color: var(--admin-text);
   min-height: 100vh;
+  overflow-x: clip;
   font-family: 'DM Sans', system-ui, sans-serif;
 }
 
@@ -717,6 +718,15 @@
 }
 
 @media (max-width: 768px) {
+  /* Let grid items shrink so inner content (e.g. wide tables) scrolls
+     within its card instead of forcing the whole page wider than the screen */
+  .admin-grid-2col > *,
+  .admin-grid-stats > *,
+  .admin-grid-scores > *,
+  .admin-grid-vitals > * {
+    min-width: 0;
+  }
+
   .admin-grid-2col {
     grid-template-columns: 1fr;
   }
