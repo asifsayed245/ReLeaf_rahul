@@ -12,6 +12,16 @@ import ConditionPage from './pages/ConditionPage'
 import SitemapPage from './pages/SitemapPage'
 import ScrollToTop from './components/ScrollToTop'
 
+// Admin CMS
+import AdminLogin from './admin/pages/AdminLogin'
+import AdminLayout from './admin/components/AdminLayout'
+import DashboardPage from './admin/pages/DashboardPage'
+import BlogManagerPage from './admin/pages/BlogManagerPage'
+import ProfileEditorPage from './admin/pages/ProfileEditorPage'
+import SEOMetricsPage from './admin/pages/SEOMetricsPage'
+import ContactsPage from './admin/pages/ContactsPage'
+import SettingsPage from './admin/pages/SettingsPage'
+
 function App() {
   // Intersection Observer for fade-in sections
   useEffect(() => {
@@ -37,6 +47,7 @@ function App() {
     <>
       <ScrollToTop />
       <Routes>
+        {/* Public site */}
         <Route element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="my-story" element={<MyStoryPage />} />
@@ -47,6 +58,17 @@ function App() {
           <Route path="blog/:slug" element={<BlogPostPage />} />
           <Route path="what-i-treat/:condition" element={<ConditionPage />} />
           <Route path="sitemap" element={<SitemapPage />} />
+        </Route>
+
+        {/* Admin CMS */}
+        <Route path="admin" element={<AdminLogin />} />
+        <Route path="admin" element={<AdminLayout />}>
+          <Route path="dashboard" element={<DashboardPage />} />
+          <Route path="blogs" element={<BlogManagerPage />} />
+          <Route path="profile" element={<ProfileEditorPage />} />
+          <Route path="seo" element={<SEOMetricsPage />} />
+          <Route path="contacts" element={<ContactsPage />} />
+          <Route path="settings" element={<SettingsPage />} />
         </Route>
       </Routes>
     </>

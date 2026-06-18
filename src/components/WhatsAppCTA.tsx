@@ -2,12 +2,14 @@ interface WhatsAppCTAProps {
   size?: 'sm' | 'md' | 'lg'
   className?: string
   label?: string
+  whatsappNumber?: string
 }
 
 export default function WhatsAppCTA({
   size = 'md',
   className = '',
   label = 'Message on WhatsApp',
+  whatsappNumber = '919820281442',
 }: WhatsAppCTAProps) {
   const sizeClasses = {
     sm: 'text-xs px-4 py-2 gap-1.5',
@@ -23,7 +25,7 @@ export default function WhatsAppCTA({
 
   return (
     <a
-      href="https://wa.me/919820281442"
+      href={`https://wa.me/${whatsappNumber}`}
       target="_blank"
       rel="noopener noreferrer"
       className={`inline-flex items-center font-semibold text-white bg-whatsapp rounded-full cta-hover shadow-md shadow-whatsapp/20 hover:bg-[#1fba59] ${sizeClasses[size]} ${className}`}

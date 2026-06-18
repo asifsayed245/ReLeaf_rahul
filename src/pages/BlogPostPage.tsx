@@ -2,12 +2,15 @@ import { useParams, Navigate, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import ReactMarkdown from 'react-markdown'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
-import { blogPosts } from '../data/blogs'
+import { useBlogPosts } from '../data/useBlogPosts'
+import { useSiteConfig } from '../data/useSiteConfig'
 import WhatsAppCTA from '../components/WhatsAppCTA'
 
 export default function BlogPostPage() {
   const { slug } = useParams<{ slug: string }>()
-  const post = blogPosts.find((p) => p.slug === slug)
+  const { posts } = useBlogPosts()
+  const { config } = useSiteConfig()
+  const post = posts.find((p) => p.slug === slug)
 
   if (!post) {
     return <Navigate to="/blog" replace />
@@ -16,7 +19,7 @@ export default function BlogPostPage() {
   return (
     <>
       <Helmet>
-        <title>{post.title} | Releaf — Rahul Seth</title>
+        <title>{`${post.title} | Releaf — ${config.ownerName}`}</title>
         <meta name="description" content={post.excerpt} />
         <meta property="og:title" content={`${post.title} | Releaf`} />
         <meta property="og:description" content={post.excerpt} />
@@ -32,7 +35,7 @@ export default function BlogPostPage() {
             datePublished: post.date,
             author: {
               '@type': 'Person',
-              name: 'Rahul Seth',
+              name: config.ownerName,
               url: 'https://releaf.co.in/my-story',
             },
             publisher: {
@@ -70,9 +73,9 @@ export default function BlogPostPage() {
           </h1>
           
           <div className="flex items-center gap-3 pt-6 border-t border-white/10">
-            <img src="/rahul-portrait.jpg" alt="Rahul Seth" className="w-10 h-10 rounded-full object-cover" />
+            <img src={config.ownerPhoto || "/rahul-portrait.jpg"} alt={config.ownerName} className="w-10 h-10 rounded-full object-cover" />
             <div>
-              <p className="text-sm font-medium">Rahul Seth</p>
+              <p className="text-sm font-medium">{config.ownerName}</p>
               <p className="text-xs text-white/60">{post.date}</p>
             </div>
           </div>
@@ -98,7 +101,7 @@ export default function BlogPostPage() {
             If this resonated with you and you're looking for guidance, I offer a free 30-minute conversation. No commitment, just an honest chat.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <WhatsAppCTA />
+            <WhatsAppCTA whatsappNumber={config.whatsappNumber} />
             <Link
               to="/book"
               className="inline-flex items-center gap-2 font-semibold text-forest border border-forest/20 rounded-full px-8 py-3.5 hover:bg-forest hover:text-white transition-all duration-200"

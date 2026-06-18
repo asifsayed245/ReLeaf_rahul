@@ -2,12 +2,14 @@ import { useState, useEffect, useCallback } from 'react'
 import { Link, useLocation, Outlet } from 'react-router-dom'
 import { Menu, X, Phone } from 'lucide-react'
 import WhatsAppCTA from './WhatsAppCTA'
+import { useSiteConfig } from '../data/useSiteConfig'
 
 /* ═══════════════════════════ NAVBAR ═══════════════════════════ */
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const location = useLocation()
+  const { config } = useSiteConfig()
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20)
@@ -78,7 +80,7 @@ function Navbar() {
               >
                 Book Free Call
               </Link>
-              <WhatsAppCTA size="sm" />
+              <WhatsAppCTA size="sm" whatsappNumber={config.whatsappNumber} />
             </div>
 
             {/* Mobile Menu Button */}
@@ -126,7 +128,7 @@ function Navbar() {
         </div>
 
         <div className="p-5 space-y-3 border-t border-mist">
-          <WhatsAppCTA className="w-full justify-center" />
+          <WhatsAppCTA className="w-full justify-center" whatsappNumber={config.whatsappNumber} />
           <Link
             to="/book"
             className="flex items-center justify-center gap-2 w-full text-sm font-semibold text-forest border border-forest/20 rounded-full px-5 py-3 hover:bg-forest hover:text-white transition-all duration-200"
@@ -143,6 +145,7 @@ function Navbar() {
 /* ═══════════════════════════ FOOTER ═══════════════════════════ */
 function Footer() {
   const currentYear = new Date().getFullYear()
+  const { config } = useSiteConfig()
 
   return (
     <footer className="bg-forest text-white/60">
@@ -155,9 +158,9 @@ function Footer() {
               <img src="/releaf-logo.png" alt="Releaf" className="h-12 w-auto object-contain" />
             </div>
             <p className="text-sm leading-relaxed mb-4">
-              Sobriety coaching from someone who has walked this road. I'm Rahul Seth — 10 years sober, certified CBT & REBT therapist.
+              Sobriety coaching from someone who has walked this road. I'm {config.ownerName} — {config.certifications}.
             </p>
-            <WhatsAppCTA size="sm" />
+            <WhatsAppCTA size="sm" whatsappNumber={config.whatsappNumber} />
           </div>
 
           {/* Quick Links */}
@@ -207,15 +210,15 @@ function Footer() {
             <ul className="space-y-3 text-sm">
               <li>
                 <span className="text-white/40 block text-xs uppercase tracking-wider mb-1">WhatsApp</span>
-                <a href="https://wa.me/919820281442" className="hover:text-white transition-colors">+91 98202 81442</a>
+                <a href={`https://wa.me/${config.whatsappNumber}`} className="hover:text-white transition-colors">{config.ownerPhone}</a>
               </li>
               <li>
                 <span className="text-white/40 block text-xs uppercase tracking-wider mb-1">Email</span>
-                <a href="mailto:rahul@releaf.co.in" className="hover:text-white transition-colors">rahul@releaf.co.in</a>
+                <a href={`mailto:${config.ownerEmail}`} className="hover:text-white transition-colors">{config.ownerEmail}</a>
               </li>
               <li>
                 <span className="text-white/40 block text-xs uppercase tracking-wider mb-1">Location</span>
-                Mumbai, India · Online across India
+                {config.location}
               </li>
               <li>
                 <span className="text-white/40 block text-xs uppercase tracking-wider mb-1">Free Consultation</span>
@@ -233,7 +236,7 @@ function Footer() {
             © {currentYear} Releaf. All rights reserved.
           </p>
           <p className="text-xs text-white/30">
-            Rahul Seth · Certified Guidance Counsellor · CBT & REBT Therapist
+            {config.ownerName} · {config.certifications}
           </p>
         </div>
       </div>
@@ -245,12 +248,12 @@ function Footer() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Person',
-            name: 'Rahul Seth',
-            jobTitle: 'Sobriety Coach & Certified Guidance Counsellor',
-            description: 'Sobriety coach with 10 years of personal recovery experience. Certified CBT & REBT therapist helping individuals across India.',
+            name: config.ownerName,
+            jobTitle: config.ownerTitle,
+            description: `Sobriety coach with personal recovery experience. ${config.certifications}`,
             url: 'https://releaf.co.in',
-            image: 'https://releaf.co.in/rahul-portrait.jpg',
-            telephone: '+919820281442',
+            image: `https://releaf.co.in${config.ownerPhoto}`,
+            telephone: config.ownerPhone,
             address: {
               '@type': 'PostalAddress',
               addressLocality: 'Mumbai',
@@ -268,9 +271,9 @@ function Footer() {
               'Mental Health Counselling',
             ],
             sameAs: [
-              'https://wa.me/919820281442',
-              'https://www.linkedin.com/in/rahulseth',
-              'https://www.instagram.com/releaf.co.in'
+              `https://wa.me/${config.whatsappNumber}`,
+              config.linkedIn,
+              config.instagram
             ],
           }),
         }}
@@ -281,11 +284,11 @@ function Footer() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'ProfessionalService',
-            name: 'Releaf — Sobriety Coaching by Rahul Seth',
-            description: 'Personalised sobriety coaching, sober companion support, and rehab transition guidance across India. Founded by Rahul Seth, 10 years sober.',
+            name: 'Releaf — Sobriety Coaching',
+            description: `Personalised sobriety coaching, sober companion support, and rehab transition guidance. Founded by ${config.ownerName}.`,
             url: 'https://releaf.co.in',
-            image: 'https://releaf.co.in/rahul-portrait.jpg',
-            telephone: '+919820281442',
+            image: `https://releaf.co.in${config.ownerPhoto}`,
+            telephone: config.ownerPhone,
             address: {
               '@type': 'PostalAddress',
               addressLocality: 'Mumbai',
@@ -337,6 +340,8 @@ function Footer() {
 
 /* ═══════════════════════════ LAYOUT ═══════════════════════════ */
 export default function Layout() {
+  const { config } = useSiteConfig()
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -347,7 +352,7 @@ export default function Layout() {
 
       {/* Sticky Mobile WhatsApp FAB */}
       <a
-        href="https://wa.me/919820281442"
+        href={`https://wa.me/${config.whatsappNumber}`}
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 md:hidden bg-whatsapp text-white p-4 rounded-full shadow-lg shadow-whatsapp/30 hover:scale-110 transition-transform duration-200"

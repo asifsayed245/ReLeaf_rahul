@@ -4,8 +4,13 @@ import { ArrowRight, Award, Calendar, Shield, BookOpen, Heart } from 'lucide-rea
 import WhatsAppCTA from '../components/WhatsAppCTA'
 import SectionReveal from '../components/SectionReveal'
 
+import { useSiteConfig } from '../data/useSiteConfig'
+
 function SobrietyCounter() {
-  const sobrietyDate = new Date(2016, 10, 28) // Nov 28, 2016
+  const { config } = useSiteConfig()
+  const dateStr = config.soberSince.split(' ').slice(0, 3).join(' ') // e.g., 28 November 2016
+  const sobrietyDate = new Date(dateStr)
+
   const now = new Date()
   const diff = now.getTime() - sobrietyDate.getTime()
   const days = Math.floor(diff / (1000 * 60 * 60 * 24))
@@ -18,22 +23,25 @@ function SobrietyCounter() {
     <div className="inline-flex items-center gap-3 bg-sage/15 border border-sage/20 rounded-full px-5 py-2.5">
       <Calendar className="w-4 h-4 text-sage" />
       <span className="text-sm text-white/70 font-medium">
-        Sober since 28 November 2016 — <span className="text-sage font-bold">{years} years, {months} months, {d} days</span>
+        Sober since {config.soberSince} — <span className="text-sage font-bold">{years} years, {months} months, {d} days</span>
       </span>
     </div>
   )
 }
 
 export default function MyStoryPage() {
+  const { config } = useSiteConfig()
+  const years = new Date().getFullYear() - parseInt(config.soberSince.split(' ').pop() || '2016', 10)
+
   return (
     <>
       <Helmet>
-        <title>My Story — Rahul Seth, 10 Years Sober | Sobriety Coach India | Releaf</title>
+        <title>{`My Story — ${config.ownerName}, ${years} Years Sober | Sobriety Coach India | Releaf`}</title>
         <meta
           name="description"
-          content="On 28 November 2016, I chose sobriety. Today, 10 years later, I help others find the same freedom. Read Rahul Seth's personal recovery story and how it shaped Releaf."
+          content={`On ${config.soberSince}, I chose sobriety. Today, ${years} years later, I help others find the same freedom. Read ${config.ownerName}'s personal recovery story and how it shaped Releaf.`}
         />
-        <meta property="og:title" content="My Story — Rahul Seth, 10 Years Sober | Sobriety Coach India" />
+        <meta property="og:title" content={`My Story — ${config.ownerName}, ${years} Years Sober | Sobriety Coach India`} />
         <meta property="og:url" content="https://releaf.co.in/my-story/" />
         <link rel="canonical" href="https://releaf.co.in/my-story/" />
       </Helmet>
@@ -43,11 +51,11 @@ export default function MyStoryPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 hero-stagger">
           <p className="eyebrow text-sage/60 mb-4">My Story</p>
           <h1 className="text-white mb-6">
-            On 28 November 2016,{' '}
+            On {config.soberSince},{' '}
             <em className="font-display italic text-sage">I chose sobriety.</em>
           </h1>
           <p className="text-lg text-white/60 font-light max-w-2xl mb-8 leading-relaxed">
-            Today, 10 years later, I help others find the same freedom. This is my story — the real one.
+            Today, {years} years later, I help others find the same freedom. This is my story — the real one.
           </p>
           <SobrietyCounter />
         </div>
@@ -59,8 +67,8 @@ export default function MyStoryPage() {
           <SectionReveal>
             <div className="flex justify-center mb-12">
               <img
-                src="/rahul-portrait.jpg"
-                alt="Rahul Seth"
+                src={config.ownerPhoto || '/rahul-portrait.jpg'}
+                alt={config.ownerName}
                 className="w-32 h-32 rounded-2xl object-cover border-2 border-sage/20"
               />
             </div>
@@ -78,7 +86,7 @@ export default function MyStoryPage() {
 
               <h2 className="font-display text-2xl text-leaf mb-6 mt-12">The turning point</h2>
               <p className="text-moss leading-relaxed mb-6">
-                On 28 November 2016, I hit bottom. Not the dramatic kind you see in movies — the quiet kind. The kind where you're sitting alone at 3 AM and you know, with absolute clarity, that you cannot continue like this.
+                On {config.soberSince}, I hit bottom. Not the dramatic kind you see in movies — the quiet kind. The kind where you're sitting alone at 3 AM and you know, with absolute clarity, that you cannot continue like this.
               </p>
               <p className="text-moss leading-relaxed mb-6">
                 That night, I made a decision. Not a resolution. Not a "I'll try to cut back." A decision. I chose sobriety. And I've held that line every single day since.
@@ -112,7 +120,7 @@ export default function MyStoryPage() {
               { icon: <Award className="w-6 h-6" />, title: 'Certified Guidance Counsellor', desc: 'Professional certification for therapeutic guidance and counselling.' },
               { icon: <BookOpen className="w-6 h-6" />, title: 'CBT Trained', desc: 'Cognitive Behavioural Therapy — evidence-based approach to changing patterns.' },
               { icon: <Shield className="w-6 h-6" />, title: 'REBT Trained', desc: 'Rational Emotive Behaviour Therapy — addressing irrational beliefs that fuel addiction.' },
-              { icon: <Heart className="w-6 h-6" />, title: '8+ Years Personal Recovery', desc: 'Lived experience with both alcohol and drug addiction. Sober since 28 November 2016.' },
+              { icon: <Heart className="w-6 h-6" />, title: `${years}+ Years Personal Recovery`, desc: `Lived experience with both alcohol and drug addiction. Sober since ${config.soberSince}.` },
             ].map((cred, i) => (
               <SectionReveal key={i} delay={i * 80}>
                 <div className="card-hover bg-white rounded-2xl border border-forest/8 p-7">
@@ -139,7 +147,7 @@ export default function MyStoryPage() {
               I promise: no judgment, no pressure. Just an honest conversation.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-3">
-              <WhatsAppCTA size="lg" />
+              <WhatsAppCTA size="lg" whatsappNumber={config.whatsappNumber} />
               <Link
                 to="/book"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-white border border-white/30 rounded-full px-7 py-3.5 hover:bg-white hover:text-forest transition-all duration-200"
