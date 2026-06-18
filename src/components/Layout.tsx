@@ -252,7 +252,7 @@ function Footer() {
             jobTitle: config.ownerTitle,
             description: `Sobriety coach with personal recovery experience. ${config.certifications}`,
             url: 'https://releaf.co.in',
-            image: `https://releaf.co.in${config.ownerPhoto}`,
+            image: /^(https?:|data:)/.test(config.ownerPhoto) ? config.ownerPhoto : `https://releaf.co.in${config.ownerPhoto}`,
             telephone: config.ownerPhone,
             address: {
               '@type': 'PostalAddress',
@@ -287,7 +287,7 @@ function Footer() {
             name: 'Releaf — Sobriety Coaching',
             description: `Personalised sobriety coaching, sober companion support, and rehab transition guidance. Founded by ${config.ownerName}.`,
             url: 'https://releaf.co.in',
-            image: `https://releaf.co.in${config.ownerPhoto}`,
+            image: /^(https?:|data:)/.test(config.ownerPhoto) ? config.ownerPhoto : `https://releaf.co.in${config.ownerPhoto}`,
             telephone: config.ownerPhone,
             address: {
               '@type': 'PostalAddress',

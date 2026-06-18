@@ -15,11 +15,11 @@ const FIELDS: { key: keyof SiteConfig; label: string; type?: string }[] = [
   { key: 'instagram', label: 'Instagram URL', type: 'url' },
 ]
 
-// Profile photo is stored inline as a compressed JPEG data URL in the config
-// sheet. Resize so the encoded string stays well under Google Sheets' ~50k
-// character per-cell limit. A circular avatar never needs to be large.
-const MAX_DIMENSION = 400
-const SIZE_BUDGET = 45000
+// Resize/compress the chosen photo before uploading so the hosted image stays
+// small and fast to load (good for page speed / SEO). A profile photo never
+// needs to be larger than this.
+const MAX_DIMENSION = 600
+const JPEG_QUALITY = 0.85
 
 function resizeImageToDataUrl(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
@@ -41,17 +41,7 @@ function resizeImageToDataUrl(file: File): Promise<string> {
         const ctx = canvas.getContext('2d')
         if (!ctx) return reject(new Error('Canvas not supported in this browser'))
         ctx.drawImage(img, 0, 0, width, height)
-
-        let quality = 0.9
-        let dataUrl = canvas.toDataURL('image/jpeg', quality)
-        while (dataUrl.length > SIZE_BUDGET && quality > 0.3) {
-          quality -= 0.1
-          dataUrl = canvas.toDataURL('image/jpeg', quality)
-        }
-        if (dataUrl.length > SIZE_BUDGET) {
-          return reject(new Error('Image is too detailed to store. Try a simpler photo.'))
-        }
-        resolve(dataUrl)
+        resolve(canvas.toDataURL('image/jpeg', JPEG_QUALITY))
       }
       img.onerror = () => reject(new Error('Could not load that image'))
       img.src = reader.result as string
@@ -116,10 +106,19 @@ export default function ProfileEditorPage() {
     setProcessing(true)
     try {
       const dataUrl = await resizeImageToDataUrl(file)
-      setConfig(prev => ({ ...prev, ownerPhoto: dataUrl }))
-      showToast('success', 'Photo ready — click Save Changes to publish')
+      const res = await fetch('/api/upload-photo', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ dataUrl, name: config.ownerName }),
+      })
+      const json = await res.json()
+      if (!json.success || !json.url) {
+        throw new Error(json.error || 'Upload failed')
+      }
+      setConfig(prev => ({ ...prev, ownerPhoto: json.url }))
+      showToast('success', 'Photo uploaded — click Save Changes to publish')
     } catch (err) {
-      showToast('error', err instanceof Error ? err.message : 'Failed to process image')
+      showToast('error', err instanceof Error ? err.message : 'Failed to upload image')
     } finally {
       setProcessing(false)
       if (fileInputRef.current) fileInputRef.current.value = ''
