@@ -120,7 +120,7 @@ function doGet(e) {
             dimension.name = 'date';
             
             const dateRange = AnalyticsData.newDateRange();
-            dateRange.startDate = '30daysAgo';
+            dateRange.startDate = '365daysAgo';
             dateRange.endDate = 'today';
             
             const request = AnalyticsData.newRunReportRequest();
