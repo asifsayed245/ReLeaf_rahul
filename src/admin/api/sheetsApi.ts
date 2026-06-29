@@ -186,6 +186,20 @@ export async function fetchBlogs(): Promise<BlogPost[]> {
   }
 }
 
+// Returns false when the Apps Script web app is unreachable or denying access
+// (it serves an HTML "Access denied" page instead of JSON). Used to warn the
+// admin that the data source — not the data — is the problem.
+export async function checkApiHealth(): Promise<boolean> {
+  try {
+    const res = await fetch(`${SHEETS_API_URL}?action=getConfig`)
+    const text = await res.text()
+    if (text.trimStart().startsWith('<')) return false
+    return JSON.parse(text).success === true
+  } catch {
+    return false
+  }
+}
+
 export async function fetchSiteConfig(): Promise<SiteConfig | null> {
   try {
     const res = await fetch(`${SHEETS_API_URL}?action=getConfig`)

@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import { Link, useLocation, Outlet, useNavigate } from 'react-router-dom'
-import { LayoutDashboard, FileText, User, Search, MessageSquare, Settings, LogOut, ExternalLink, Menu } from 'lucide-react'
+import { LayoutDashboard, FileText, User, Search, MessageSquare, Settings, LogOut, ExternalLink, Menu, AlertTriangle } from 'lucide-react'
+import { checkApiHealth } from '../api/sheetsApi'
 import '../admin.css'
 
 const navItems = [
@@ -16,12 +17,18 @@ export default function AdminLayout() {
   const location = useLocation()
   const navigate = useNavigate()
   const [sidebarOpen, setSidebarOpen] = useState(false)
+  const [apiHealthy, setApiHealthy] = useState<boolean | null>(null)
 
   // Auth guard
   useEffect(() => {
     const session = localStorage.getItem('releaf_admin_session')
     if (!session) navigate('/admin')
   }, [navigate])
+
+  // Warn if the Google Apps Script data source is unreachable / access-denied
+  useEffect(() => {
+    checkApiHealth().then(setApiHealthy)
+  }, [])
 
   // Close sidebar on route change (mobile)
   useEffect(() => { setSidebarOpen(false) }, [location])
@@ -112,6 +119,20 @@ export default function AdminLayout() {
             </span>
           </div>
         </header>
+
+        {apiHealthy === false && (
+          <div style={{
+            background: 'rgba(239,68,68,0.1)', borderBottom: '1px solid rgba(239,68,68,0.35)',
+            color: '#fca5a5', padding: '0.75rem 1.25rem', fontSize: '0.8rem',
+            display: 'flex', alignItems: 'flex-start', gap: '0.6rem', lineHeight: 1.5
+          }}>
+            <AlertTriangle size={16} style={{ flexShrink: 0, marginTop: '0.1rem' }} />
+            <span>
+              <strong>Can't reach your data source.</strong> Blogs, contacts, profile and analytics may show empty — the data is safe, but the site can't read it.
+              Open the Apps Script project → <strong>Deploy → Manage deployments</strong>, set <strong>"Who has access" to "Anyone"</strong>, and deploy a new version.
+            </span>
+          </div>
+        )}
 
         <div className="admin-content">
           <Outlet />
