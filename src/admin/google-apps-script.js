@@ -1,25 +1,25 @@
 /**
  * Google Apps Script — Releaf CMS REST API
- * 
- * DEPLOY: Extensions → Apps Script → Deploy → Web App
+ *
+ * DEPLOY: Extensions → Apps Script → Deploy → Manage deployments → edit → New version
  * - Execute as: Me
  * - Who has access: Anyone
- * 
+ *
  * This script manages 3 sheets:
- * 1. "Contacts" (existing) — form submissions from the website
- * 2. "Blogs" (new) — blog posts managed via CMS
- * 3. "SiteConfig" (new) — key-value site configuration
- * 
- * PASTE THIS INTO YOUR EXISTING APPS SCRIPT PROJECT
- * (Replace the current doPost/doGet if needed, but the contact form handler is preserved)
+ * 1. "Contacts" — form submissions from the website
+ * 2. "Blogs" — blog posts managed via CMS
+ * 3. "SiteConfig" — key-value site configuration
+ *
+ * NOTE: The GCP project's OAuth consent screen must be "In production"
+ * (not "Testing"), otherwise the stored authorization expires every 7 days
+ * and the web app starts returning "Access denied".
  */
 
-const SPREADSHEET_ID = '1iFN69Edt_Xq4V30n8sphIIR0GIQXfnFm3q1HnaYCdrA'; // ← Your spreadsheet ID
+const SPREADSHEET_ID = '1iFN69Edt_Xq4V30n8sphIIR0GIQXfnFm3q1HnaYCdrA';
 
 // Google Analytics 4 & Search Console configuration
-// Paste your IDs below (Leave blank to use mock data in the dashboard)
-const GA4_PROPERTY_ID = '542143620'; // e.g. '123456789'
-const GSC_SITE_URL = 'https://releaf.co.in/'; // e.g. 'sc-domain:releaf.co.in' or 'https://releaf.co.in/'
+const GA4_PROPERTY_ID = '542143620';
+const GSC_SITE_URL = 'https://releaf.co.in/';
 
 function getSheet(name) {
   const ss = SPREADSHEET_ID
@@ -72,11 +72,6 @@ function configToJson(sheet) {
   return config;
 }
 
-function corsHeaders() {
-  return ContentService.createTextOutput('')
-    .setMimeType(ContentService.MimeType.JSON);
-}
-
 // ── GET handler ──
 function doGet(e) {
   const action = (e.parameter && e.parameter.action) || '';
@@ -85,94 +80,105 @@ function doGet(e) {
   try {
     switch (action) {
       case 'getBlogs': {
-        const sheet = getSheet('Blogs');
-        result = { success: true, data: sheetToJson(sheet) };
+        result = { success: true, data: sheetToJson(getSheet('Blogs')) };
         break;
       }
       case 'getConfig': {
-        const sheet = getSheet('SiteConfig');
-        result = { success: true, data: configToJson(sheet) };
+        result = { success: true, data: configToJson(getSheet('SiteConfig')) };
         break;
       }
       case 'getContacts': {
-        const sheet = getSheet('Contacts');
-        result = { success: true, data: sheetToJson(sheet) };
+        result = { success: true, data: sheetToJson(getSheet('Contacts')) };
         break;
       }
       case 'checkPassword': {
         const password = e.parameter.password || '';
-        const sheet = getSheet('SiteConfig');
-        const config = configToJson(sheet);
+        const config = configToJson(getSheet('SiteConfig'));
         result = { success: true, valid: config.adminPassword === password };
         break;
       }
       case 'getAnalytics': {
         let traffic = [];
         let seo = [];
-        
-        // 1. Fetch Google Analytics 4 Data
+
+        // 1. Fetch Google Analytics 4 data
         if (GA4_PROPERTY_ID) {
           try {
             const metric = AnalyticsData.newMetric();
             metric.name = 'screenPageViews';
-            
+
             const dimension = AnalyticsData.newDimension();
             dimension.name = 'date';
-            
+
             const dateRange = AnalyticsData.newDateRange();
             dateRange.startDate = '365daysAgo';
             dateRange.endDate = 'today';
-            
+
             const request = AnalyticsData.newRunReportRequest();
             request.dimensions = [dimension];
             request.metrics = [metric];
             request.dateRanges = [dateRange];
-            
+
             const report = AnalyticsData.Properties.runReport(request, 'properties/' + GA4_PROPERTY_ID);
             if (report.rows) {
               traffic = report.rows.map(row => ({
                 date: row.dimensionValues[0].value,
                 views: parseInt(row.metricValues[0].value, 10)
-              })).sort((a, b) => a.date.localeCompare(b.date)); // chronological order
+              })).sort((a, b) => a.date.localeCompare(b.date));
             }
-          } catch(e) {
+          } catch (e) {
             console.error('GA4 Error:', e);
           }
         }
 
-        // 2. Fetch Search Console Data
+        // 2. Fetch Search Console data (manual HTTP request)
         if (GSC_SITE_URL) {
           try {
             const today = new Date();
             const start = new Date();
             start.setDate(today.getDate() - 30);
-            
-            const request = {
+
+            const payload = {
               startDate: Utilities.formatDate(start, 'UTC', 'yyyy-MM-dd'),
               endDate: Utilities.formatDate(today, 'UTC', 'yyyy-MM-dd'),
               dimensions: ['query'],
               rowLimit: 20
             };
-            const response = SearchConsole.Searchanalytics.query(request, GSC_SITE_URL);
-            if (response.rows) {
-              seo = response.rows.map(row => ({
+
+            const response = UrlFetchApp.fetch(
+              'https://searchconsole.googleapis.com/webmasters/v3/sites/' + encodeURIComponent(GSC_SITE_URL) + '/searchAnalytics/query',
+              {
+                method: 'post',
+                contentType: 'application/json',
+                headers: { Authorization: 'Bearer ' + ScriptApp.getOAuthToken() },
+                payload: JSON.stringify(payload),
+                muteHttpExceptions: true
+              }
+            );
+
+            const json = JSON.parse(response.getContentText());
+
+            if (json.rows) {
+              seo = json.rows.map(row => ({
                 keyword: row.keys[0],
                 clicks: row.clicks,
                 impressions: row.impressions,
                 ctr: row.ctr,
                 position: row.position
               }));
+            } else {
+              console.error('GSC Error: No rows or error returned: ', response.getContentText());
             }
           } catch (e) {
             console.error('GSC Error:', e);
           }
         }
-        
+
         result = { success: true, data: { traffic, seo } };
         break;
       }
       default:
-        result = { success: false, error: 'Unknown action. Use: getBlogs, getConfig, getContacts, checkPassword' };
+        result = { success: false, error: 'Unknown action. Use: getBlogs, getConfig, getContacts, checkPassword, getAnalytics' };
     }
   } catch (err) {
     result = { success: false, error: err.message };
@@ -210,11 +216,9 @@ function doPost(e) {
         const body = JSON.parse(e.postData.contents);
         const sheet = getSheet('Blogs');
         const data = sheet.getDataRange().getValues();
-        const slugCol = 0;
         for (let i = 1; i < data.length; i++) {
-          if (data[i][slugCol] === body.slug) {
-            const row = i + 1;
-            sheet.getRange(row, 1, 1, 8).setValues([[
+          if (data[i][0] === body.slug) {
+            sheet.getRange(i + 1, 1, 1, 8).setValues([[
               body.slug, body.title, body.excerpt, body.date,
               body.readTime, body.category, body.content, body.status || 'published'
             ]]);
@@ -289,7 +293,7 @@ function doPost(e) {
             b.readTime, b.category, b.content, b.status || 'published'
           ]);
         });
-        result = { success: true, message: `${blogs.length} blogs seeded` };
+        result = { success: true, message: blogs.length + ' blogs seeded' };
         break;
       }
       default:
@@ -323,4 +327,21 @@ function handleContactForm(e) {
     return ContentService.createTextOutput(JSON.stringify({ success: false, error: err.message }))
       .setMimeType(ContentService.MimeType.JSON);
   }
+}
+
+// ── Diagnostic: run this once after pasting to (re)grant authorization ──
+function testGA4() {
+  const metric = AnalyticsData.newMetric();
+  metric.name = 'screenPageViews';
+  const dimension = AnalyticsData.newDimension();
+  dimension.name = 'date';
+  const dateRange = AnalyticsData.newDateRange();
+  dateRange.startDate = '30daysAgo';
+  dateRange.endDate = 'today';
+  const request = AnalyticsData.newRunReportRequest();
+  request.dimensions = [dimension];
+  request.metrics = [metric];
+  request.dateRanges = [dateRange];
+  const report = AnalyticsData.Properties.runReport(request, 'properties/' + GA4_PROPERTY_ID);
+  Logger.log('ROWS RETURNED: ' + (report.rows ? report.rows.length : 'none'));
 }

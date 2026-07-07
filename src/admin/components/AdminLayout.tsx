@@ -129,7 +129,7 @@ export default function AdminLayout() {
             <AlertTriangle size={16} style={{ flexShrink: 0, marginTop: '0.1rem' }} />
             <span>
               <strong>Can't reach your data source.</strong> Blogs, contacts, profile and analytics may show empty — the data is safe, but the site can't read it.
-              Open the Apps Script project → <strong>Deploy → Manage deployments</strong>, set <strong>"Who has access" to "Anyone"</strong>, and deploy a new version.
+              Usually this means the script's Google authorization expired: open the Apps Script editor, select <strong>testGA4</strong> in the toolbar dropdown, click <strong>Run</strong>, and approve access. If it persists, redeploy via <strong>Deploy → Manage deployments → ✏️ → New version</strong>.
             </span>
           </div>
         )}
