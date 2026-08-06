@@ -9,10 +9,35 @@ export interface BlogPost {
   title: string
   excerpt: string
   date: string
+  /** Raw sheet value, kept in ISO form for structured data / machine readers */
+  dateISO?: string
   readTime: string
   category: string
   content: string
   status?: string
+}
+
+// Google Sheets hands back Date cells as ISO timestamps ("2016-11-27T18:30:00.000Z")
+// and formula errors as "#ERROR!". Normalise both here, at the boundary, so no raw
+// sheet artefact ever reaches the UI.
+const ISO_TIMESTAMP = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}/
+const SHEET_ERROR = /^#(ERROR!|REF!|VALUE!|NAME\?|NUM!|NULL!|DIV\/0!|N\/A)$/
+
+// The spreadsheet's timezone is Asia/Kolkata. Formatting in UTC would shift the
+// date back a day — 2016-11-27T18:30Z is 28 November 2016 locally.
+function formatSheetDate(value: string): string {
+  const d = new Date(value)
+  if (Number.isNaN(d.getTime())) return value
+  return d.toLocaleDateString('en-GB', {
+    day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Asia/Kolkata',
+  })
+}
+
+function cleanCell(value: unknown): string {
+  const s = value == null ? '' : String(value)
+  if (SHEET_ERROR.test(s)) return ''
+  if (ISO_TIMESTAMP.test(s)) return formatSheetDate(s)
+  return s
 }
 
 export interface SiteConfig {
@@ -177,7 +202,13 @@ export async function fetchBlogs(): Promise<BlogPost[]> {
   try {
     const res = await fetch(`${SHEETS_API_URL}?action=getBlogs`)
     const json = await res.json()
-    if (json.success) return json.data
+    if (json.success) {
+      return (json.data as BlogPost[]).map(post => ({
+        ...post,
+        date: cleanCell(post.date),
+        dateISO: post.date,
+      }))
+    }
     console.error('fetchBlogs error:', json.error)
     return []
   } catch (err) {
@@ -204,7 +235,13 @@ export async function fetchSiteConfig(): Promise<SiteConfig | null> {
   try {
     const res = await fetch(`${SHEETS_API_URL}?action=getConfig`)
     const json = await res.json()
-    if (json.success) return json.data
+    if (json.success) {
+      const cleaned: Record<string, string> = {}
+      Object.entries(json.data as Record<string, unknown>).forEach(([key, value]) => {
+        cleaned[key] = cleanCell(value)
+      })
+      return cleaned as SiteConfig
+    }
     console.error('fetchSiteConfig error:', json.error)
     return null
   } catch (err) {

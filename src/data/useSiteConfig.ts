@@ -26,7 +26,15 @@ export function useSiteConfig() {
     setLoading(true)
     try {
       const data = await fetchSiteConfig()
-      if (data) setConfig(data)
+      // Merge over the defaults and skip blanks, so a missing or unreadable
+      // cell falls back to a sensible value instead of rendering empty.
+      if (data) {
+        const merged: SiteConfig = { ...DEFAULT_CONFIG }
+        Object.entries(data).forEach(([key, value]) => {
+          if (value !== '') merged[key] = value
+        })
+        setConfig(merged)
+      }
     } catch (err) {
       setError(String(err))
     } finally {

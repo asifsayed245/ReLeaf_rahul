@@ -32,7 +32,7 @@ export default function BlogPostPage() {
             '@type': 'Article',
             headline: post.title,
             description: post.excerpt,
-            datePublished: post.date,
+            datePublished: post.dateISO || post.date,
             author: {
               '@type': 'Person',
               name: config.ownerName,
